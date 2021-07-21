@@ -11,7 +11,7 @@ const Navbar = (props) => {
               <div id="logo">
                 <h1>
                   <a className="navbar-brand" href="/">
-                    <i className="fad fa-globe-stand" /> MMTP
+                    <i className="fad fa-globe-stand" /> MYTP
                   </a>
                 </h1>
               </div>
