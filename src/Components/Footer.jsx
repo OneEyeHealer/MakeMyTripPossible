@@ -3,10 +3,9 @@ import React from "react";
 function Footer(props) {
   return (
     <>
-      {/* <!--footer --> */}
       <footer>
-        <div className="footer_1its py-5">
-          <div className="container py-md-4">
+        <div className="footer_1its pt-5">
+          <div className="container py-md-1">
             <div className="row footer-top mb-md-5 mb-4">
               <div
                 className="col-lg-4 col-md-6 footer-grid_section_1its"

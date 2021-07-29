@@ -461,8 +461,9 @@ a.contact:hover {
 /*-- banner --*/
 
 .main-content {
-  background: url(https://image.freepik.com/free-vector/flat-travel-background_23-2148046331.jpg)
-    no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.589)),
+    url(http://travelwp.physcode.com/home-4/wp-content/uploads/sites/2/2017/04/banner-top.jpg)
+      no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -473,7 +474,7 @@ a.contact:hover {
 }
 
 .main-content.inner {
-  background: url(https://image.freepik.com/free-vector/flat-travel-background_23-2148046331.jpg)
+  background: url(http://travelwp.physcode.com/home-4/wp-content/uploads/sites/2/2017/04/banner-top.jpg)
     no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -482,6 +483,15 @@ a.contact:hover {
   -ms-background-size: cover;
   min-height: 16em;
   position: relative;
+}
+.not-found {
+  position: relative;
+  width: 100%;
+}
+.not-found .backtohome {
+  position: absolute;
+  top: 10%;
+  left: 40%;
 }
 
 .banner-info-w3ls p {
@@ -562,7 +572,7 @@ section.banner {
   border-radius: 5px;
   width: 35%;
   position: relative;
-  margin: 8em auto;
+  margin: 4em auto;
   padding: 3em 1em;
 }
 
@@ -833,6 +843,8 @@ ul.tic-info li span {
 .property-info-list {
   padding: 1.2em 1em;
   background: #0f3285;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .property-info-list.mode-info {
@@ -880,9 +892,15 @@ ul.tic-info li span {
 .footer-properties span {
   margin-right: 5px;
 }
-
-ul.facilities-list span {
+div.facilities-list {
+  display: block;
+}
+div.facilities-list span i {
+  font-size: 14px;
+}
+div.facilities-list span {
   margin-right: 0.5em;
+  color: #fff;
 }
 
 .footer-properties {
@@ -902,8 +920,13 @@ section#gallery {
 
 .gal-img img {
   background: #fff;
+  height: auto;
+  width: 100%;
 }
-
+.gal-info {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 .gal-info:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -1073,10 +1096,10 @@ p.para-sign {
   -o-border-radius: 5px;
 }
 
-.sign-info input[type="text"],
+/* .sign-info input[type="text"],
 .sign-info input[type="email"],
 .sign-info input[type="password"] {
-}
+} */
 
 .sign-info input[type="submit"] {
   color: #0d58e2;
@@ -1139,7 +1162,7 @@ label.anim a {
 label.anim a {
   display: inline-block;
   text-decoration: none;
-  float: right;
+  /* float: right; */
 }
 
 input.checkbox {
@@ -2092,3 +2115,61 @@ a.move-top span {
 }
 
 /*--//responsive--*/
+
+.contact .info {
+  width: 100%;
+  background: #fff;
+}
+
+.contact .info i {
+  font-size: 20px;
+  /* color: #5cdb95; */
+  color: var(--scheme-color);
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #eef7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 7px 0 0 2.5em;
+  font-size: 22px;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #05386b;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  margin-top: 0 !important;
+  font-size: 14px;
+  color: var(--contact-text);
+}
+.contact .info p a {
+  text-decoration: none;
+  color: var(--contact-text);
+}
+
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #05386b;
+  color: #fff;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  background: #fff;
+}
