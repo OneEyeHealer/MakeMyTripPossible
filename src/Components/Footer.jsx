@@ -96,8 +96,8 @@ function Footer(props) {
           <div className="row no-gutters text-center">
             <div className="col">
               <p className="copy-w3layouts">
-                © 2021 MakeMyTripPossible. All rights reserved | Design by
-                <a href="http://github.OneEyeHealer.com">&nbsp;OneEyeHealer.</a>
+                © 2021 MakeYourTripPossible. All rights reserved | Design by
+                <a href="http://github.OneEyeHealer.io">OneEyeHealer.</a>
               </p>
               {/* </div>
             <div className="col-md-4"> */}

@@ -57,3 +57,7 @@ code {
   display: inline-block;
   background: #26bdf7;
 }
+
+form input {
+  margin: 0.7em 0;
+}

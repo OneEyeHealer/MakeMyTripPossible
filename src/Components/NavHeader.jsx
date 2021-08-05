@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../Images/MYTP_LOGO.png";
 import { Link } from "react-router-dom";
 
 function NavHeader(props) {
@@ -10,7 +11,8 @@ function NavHeader(props) {
             <div id="logo">
               <h1>
                 <a className="navbar-brand" href="/">
-                  <i className="fad fa-globe-stand" /> MYTP
+                  <img src={logo} alt="MYTP-logo" width="40px" height="auto" />{" "}
+                  MYTP
                 </a>
               </h1>
             </div>

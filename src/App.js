@@ -4,17 +4,21 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import HomePage from "./Pages/HomePage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ContactPage from "./Pages/ContactPage";
+import HolidayPackagesForm from "./Components/HolidayPackagesForm";
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <Router>
       <Route render={(props) => <Navbar {...props} />} />
+      <ToastContainer />
       <div className="main">
         <Switch>
           <Route path="/home" render={(props) => <HomePage {...props} />} />
@@ -24,6 +28,7 @@ function App() {
           <Redirect to="/not-found" />
         </Switch>
       </div>
+      <HolidayPackagesForm />
       <Footer />
     </Router>
   );
