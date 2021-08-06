@@ -468,8 +468,7 @@ a.contact:hover {
 }
 
 .main-content.inner {
-  background: url(http://travelwp.physcode.com/home-4/wp-content/uploads/sites/2/2017/04/banner-top.jpg)
-    no-repeat;
+  background: url(./Images/banner-top.jpg) no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
