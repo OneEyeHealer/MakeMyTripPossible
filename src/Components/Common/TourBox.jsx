@@ -17,10 +17,10 @@ function TourBox({
   return (
     <>
       <div className="col-lg-4 gal-img mt-lg-4">
+        <span className="onsale">{discount}% off</span>
         <div className="gal-info">
           <Link to="destination">
             <img src={src.TourImg} alt="Tour-name" className="img-fluid" />
-            <span className="onsale">{discount}% off</span>
           </Link>
           <div className="property-info-list">
             <div className="float-end price-tag">

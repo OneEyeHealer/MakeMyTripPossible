@@ -4,7 +4,7 @@ function Footer(props) {
   return (
     <>
       <footer>
-        <div className="footer_1its pt-5">
+        <div className="footer_1its pt-5 pb-3">
           <div className="container py-md-1">
             <div className="row footer-top mb-md-5 mb-4">
               <div

@@ -61,16 +61,16 @@ function HolidayPackagesForm(props) {
   const notify = (message) => toast.success(`${message}`);
   return (
     <>
-      <section className="about py-lg-5 py-md-5 py-5">
+      <section className="about py-lg-5 py-md-5 py-5 contact-form">
         <div className="container">
           <div className="inner-sec-w3pvt py-lg-5 py-3">
-            <form onSubmit={handleSubmit} className="w-50 m-auto">
+            <form onSubmit={handleSubmit} className="w-75 m-auto">
               <h3 className="tittle text-center mb-lg-5 mb-3 px-lg-5">
                 Holiday Pacage Form
               </h3>
               {/* name */}
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Name:</label>
                 <input
                   type="text"
                   className="form-control"
@@ -80,7 +80,7 @@ function HolidayPackagesForm(props) {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="phone">Phone</label>
+                <label htmlFor="phone">Phone:</label>
                 <input
                   type="text"
                   className="form-control"
@@ -91,7 +91,7 @@ function HolidayPackagesForm(props) {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email:</label>
                 <input
                   type="email"
                   className="form-control"
@@ -111,7 +111,7 @@ function HolidayPackagesForm(props) {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="city">City</label>
+                <label htmlFor="city">City:</label>
                 <input
                   type="text"
                   className="form-control"
@@ -121,7 +121,7 @@ function HolidayPackagesForm(props) {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="destination">Destination</label>
+                <label htmlFor="destination">Destination:</label>
                 <input
                   type="text"
                   className="form-control"

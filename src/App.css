@@ -1,8 +1,3 @@
-/*--
-	Author: lavi
-	Author URL: http://lavi.com
---*/
-
 html,
 body {
   margin: 0;
@@ -459,11 +454,10 @@ a.contact:hover {
 /*-- //header --*/
 
 /*-- banner --*/
-
+/* http://travelwp.physcode.com/home-4/wp-content/uploads/sites/2/2017/04/banner-top.jpg */
 .main-content {
   background: linear-gradient(rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.589)),
-    url(http://travelwp.physcode.com/home-4/wp-content/uploads/sites/2/2017/04/banner-top.jpg)
-      no-repeat center;
+    url(./Images/banner-top.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

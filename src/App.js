@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import HomePage from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ContactPage from "./Pages/ContactPage";
 import HolidayPackagesForm from "./Components/HolidayPackagesForm";
@@ -21,7 +22,16 @@ function App() {
       <ToastContainer />
       <div className="main">
         <Switch>
-          <Route path="/home" render={(props) => <HomePage {...props} />} />
+          <Route
+            path="/home"
+            exact
+            render={(props) => <HomePage {...props} />}
+          />
+          <Route
+            path="/about-us"
+            exact
+            render={(props) => <AboutPage {...props} />}
+          />
           <Route path="/contact-us" component={ContactPage} />
           <Route path="/not-found" component={NotFoundPage} />
           <Redirect from="/" exact to="/home" />

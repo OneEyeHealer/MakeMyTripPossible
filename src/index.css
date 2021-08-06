@@ -42,7 +42,7 @@ code {
 }
 .onsale {
   position: relative;
-  top: -9em;
+  top: 1.8em;
   right: 0;
   padding: 0.5em 0.7em;
   color: #fff;
@@ -60,4 +60,9 @@ code {
 
 form input {
   margin: 0.7em 0;
+}
+
+.contact-form {
+  background: url(./Images/MYTP-contact-background.jpg) no-repeat;
+  background-size: cover;
 }

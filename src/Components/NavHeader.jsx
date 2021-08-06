@@ -26,7 +26,7 @@ function NavHeader(props) {
                 <Link to="/home">Home</Link>
               </li>
               <li>
-                <a href="/">About</a>
+                <Link to="/about-us">About</Link>
               </li>
               <li className="dropdown">
                 <label htmlFor="drop-2" className="toggle">

@@ -1,4 +1,5 @@
-import { TourImg } from "./ImgService";
+// import { TourImg } from "./ImgService";
+import TourImg from "../Images/MYTP-xyz-tour.jpg";
 const Tours = [
   {
     key: "tour1",
