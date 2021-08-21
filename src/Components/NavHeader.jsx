@@ -72,22 +72,22 @@ function NavHeader({ pathname }) {
                 <input type="checkbox" id="drop-2" />
                 <ul>
                   <li>
-                    <Link to="/service/bus">
+                    <Link to="/">
                       <i className={popular}></i>&nbsp;Popular places
                     </Link>
                   </li>
                   <li>
-                    <Link to="/service/hotel">
+                    <Link to="/">
                       <i className="fad fa-trees"></i>&nbsp;Nature places
                     </Link>
                   </li>
                   <li>
-                    <Link to="/service/car">
+                    <Link to="/">
                       <i className="fad fa-gopuram"></i>&nbsp;Spritual places
                     </Link>
                   </li>
                   <li>
-                    <Link to="/service/flights">
+                    <Link to="/">
                       <i className="fad fa-praying-hands"></i>&nbsp;Cultural
                       places
                     </Link>
