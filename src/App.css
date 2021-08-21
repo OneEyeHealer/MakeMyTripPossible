@@ -149,6 +149,7 @@ header {
   width: 100%;
   min-width: 4em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
 }
 
 .toggle,
@@ -258,7 +259,7 @@ nav ul li:hover > ul {
 /* Fisrt Tier Dropdown */
 
 nav ul ul li {
-  width: 170px;
+  width: 180px;
   float: none;
   display: list-item;
   position: relative;
@@ -310,7 +311,6 @@ li > a:only-child:after {
   .menu {
     display: none;
   }
-
   /* Stylinf the toggle lable */
   .toggle {
     display: block;
@@ -320,14 +320,14 @@ li > a:only-child:after {
     border: none;
     float: right;
     /* background-color: #212529; */
-    color: #fff;
+    color: inherit;
     cursor: pointer !important;
     margin-bottom: 0;
     text-transform: uppercase;
     /* margin-top: 0.7em; */
   }
   .toggle i {
-    color: #000;
+    color: inherit;
   }
 
   .menu .toggle {
@@ -348,7 +348,10 @@ li > a:only-child:after {
   /* Display Dropdown when clicked on Parent Lable */
   [id^="drop"]:checked + ul {
     display: block;
-    background: rgba(16, 16, 16, 0.85);
+    background: #0f3285;
+    /* background: url(https://www.catenon.com/front/img/backgrounds/bg-digital.jpg)
+      no-repeat;
+    background-size: contain; */
     padding: 15px 0;
     text-align: center;
     width: 100%;
@@ -386,7 +389,7 @@ li > a:only-child:after {
 
   nav ul li ul li .toggle,
   nav ul ul a {
-    background-color: #212121;
+    background-color: rgba(0, 0, 0, 0.199);
   }
 
   /* Hide Dropdowns by Default */
@@ -505,7 +508,8 @@ a.contact:hover {
   font-weight: 300;
 }
 
-.banner-info-w3ls a {
+.banner-info-w3ls a,
+.banner-info-w3ls span {
   background: #ef9632;
   padding: 11px 30px;
   font-size: 14px;
@@ -520,7 +524,8 @@ a.contact:hover {
   -ms-box-shadow: 0 12px 60px rgba(0, 0, 0, 0.2);
 }
 
-.banner-info-w3ls a:hover {
+.banner-info-w3ls a:hover,
+.banner-info-w3ls span:hover {
   background: #ff3838;
   color: #fff;
 }
@@ -623,6 +628,7 @@ h3.tittle {
 }
 
 .feature-grids p {
+  text-align: justify;
   margin: 0;
   color: #666;
   line-height: 28px;
@@ -1299,6 +1305,12 @@ input.checkbox:checked:after {
   letter-spacing: 1px;
 }
 
+.footer-text ul li {
+  color: #73828e;
+  display: inline-block;
+  list-style: none;
+  padding-right: 10px;
+}
 .footer-text p,
 .contact-info p {
   color: #727377;
@@ -1461,6 +1473,8 @@ ul.social_section_1info a:hover {
 ul.links li {
   list-style-type: none;
   margin: 5px 0;
+  display: inline-block;
+  padding-right: 10px;
 }
 
 ul.links li a {

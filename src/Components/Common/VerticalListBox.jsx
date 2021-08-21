@@ -1,12 +1,10 @@
 import React from "react";
-import { verticalPoints } from "../../Services/VerticalService";
-
-function VerticalListBox({ key, title, para, icon }) {
+function VerticalListBox({ data, key, title, para, icon }) {
   return (
     <>
       <div className="col-lg-6 serv_bottom feature-grids pl-lg-5">
         <div className="featured-left text-left">
-          {verticalPoints.map((vpoint) => (
+          {data.map((vpoint) => (
             <div key={vpoint[key]} className="bottom-gd px-1">
               <span className={vpoint[icon]} aria-hidden="true"></span>
               <h3 className="my-4">{vpoint[title]}</h3>

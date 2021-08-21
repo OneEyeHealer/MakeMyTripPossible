@@ -4,23 +4,25 @@ import { ContactInfo } from "../Services/ContactService";
 function SectionContact({ Address, EamilId, PhoneOne, PhoneTwo }) {
   return (
     <>
-      <section class="about mt-3">
-        <div class="container">
-          <div class="inner-sec-w3pvt">
-            <h3 class="tittle text-center mb-lg-5 mb-3 px-lg-5">Contact Us.</h3>
-            <div class="fetured-info">
-              <div class="row fetured-sec mt-lg-5 my-3">
-                <div class="col-lg-6 p-0">
-                  <div class="img-effect">
+      <section className="about mt-3">
+        <div className="container">
+          <div className="inner-sec-w3pvt">
+            <h3 className="tittle text-center mb-lg-5 mb-3 px-lg-5">
+              Contact Us.
+            </h3>
+            <div className="fetured-info">
+              <div className="row fetured-sec mt-lg-5 my-3">
+                <div className="col-lg-6 p-0">
+                  <div className="img-effect">
                     <img
                       src="https://www.momkidcare.com/img/contact/Contact-Us.png"
                       alt=""
-                      class="img-fluid image1"
+                      className="img-fluid image1"
                     />
                   </div>
                 </div>
-                <div class="col-lg-6 serv_bottom feature-grids pl-lg-5">
-                  <div class="featured-left text-left">
+                <div className="col-lg-6 serv_bottom feature-grids pl-lg-5">
+                  <div className="featured-left text-left">
                     <div className="contact" id="contact">
                       <div className="col-md-8">
                         <div className="info">

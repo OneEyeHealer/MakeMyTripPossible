@@ -11,7 +11,7 @@ const Navbar = ({ location }) => {
 
   return (
     <>
-      <NavHeader />
+      <NavHeader pathname={pathname} />
       <div
         className={showbanner ? "main-content" : "main-content inner"}
         id="home"

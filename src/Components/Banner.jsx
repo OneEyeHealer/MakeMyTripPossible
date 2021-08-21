@@ -16,7 +16,7 @@ function Banner(props) {
                 posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus
                 turpis sodales quis.
               </p>
-              <a href="about.html" className="btn">
+              <a href="/home/#explore-more" className="btn">
                 Read More
               </a>
             </div>

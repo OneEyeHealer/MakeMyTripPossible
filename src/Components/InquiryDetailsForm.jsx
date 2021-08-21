@@ -1,8 +1,24 @@
 import React, { useState } from "react";
+import ReactTooltip from "react-tooltip";
 import { toast } from "react-toastify";
+import { InquiryFormData } from "../Services/ContactService";
+import {
+  bus as Bus,
+  car as Car,
+  hotel as Hotel,
+  group as Group,
+  holiday as Holiday,
+  flight as Flight,
+} from "../Services/ImgService";
 
-function HolidayPackagesForm(props) {
+function InquiryDetialsForm() {
   const [data, setdata] = useState({
+    bus: "",
+    car: "",
+    hotel: "",
+    group: "",
+    holiday: "",
+    flight: "",
     name: "",
     phone: "",
     email: "",
@@ -13,8 +29,22 @@ function HolidayPackagesForm(props) {
     members: "",
   });
 
-  const { name, phone, email, place, city, destination, ondate, members } =
-    data;
+  const {
+    bus,
+    car,
+    hotel,
+    group,
+    holiday,
+    flight,
+    name,
+    phone,
+    email,
+    place,
+    city,
+    destination,
+    ondate,
+    members,
+  } = data;
 
   const handleChange = (e) => {
     setdata({ ...data, [e.target.name]: e.target.value });
@@ -29,6 +59,12 @@ function HolidayPackagesForm(props) {
         },
         body: JSON.stringify([
           [
+            bus,
+            car,
+            hotel,
+            group,
+            holiday,
+            flight,
             name,
             phone,
             email,
@@ -47,6 +83,12 @@ function HolidayPackagesForm(props) {
       );
       setdata({
         ...data,
+        bus: "",
+        car: "",
+        hotel: "",
+        group: "",
+        holiday: "",
+        flight: "",
         name: "",
         phone: "",
         email: "",
@@ -61,14 +103,102 @@ function HolidayPackagesForm(props) {
   const notify = (message) => toast.success(`${message}`);
   return (
     <>
+      <ReactTooltip />
       <section className="about py-lg-5 py-md-5 py-5 contact-form">
         <div className="container">
           <div className="inner-sec-w3pvt py-lg-5 py-3">
             <form onSubmit={handleSubmit} className="w-75 m-auto">
               <h3 className="tittle text-center mb-lg-5 mb-3 px-lg-5">
-                Holiday Pacage Form
+                {InquiryFormData.title}
               </h3>
-              {/* name */}
+              <h6 className="mb-5">Note: {InquiryFormData.note}</h6>
+              <div className="row">
+                <div className="col-2">
+                  <div className="form-group" data-tip="Bus Service">
+                    <label htmlFor="bus">
+                      <i className={Bus}></i>
+                    </label>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name="bus"
+                      value={bus}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="form-group" data-tip="Car Service">
+                    <label htmlFor="car">
+                      <i className={Car}></i>
+                    </label>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name="car"
+                      value={car}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="form-group" data-tip="Hotel Service">
+                    <label htmlFor="hotel">
+                      <i className={Hotel}></i>
+                    </label>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name="hotel"
+                      value={hotel}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="form-group" data-tip="Group Service">
+                    <label htmlFor="group">
+                      <i className={Group}></i>
+                    </label>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name="group"
+                      value={group}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="form-group" data-tip="Holiday Service">
+                    <label htmlFor="holiday">
+                      <i className={Holiday}></i>
+                    </label>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name="holiday"
+                      value={holiday}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="form-group" data-tip="Flight Service">
+                    <label htmlFor="flight">
+                      <i className={Flight}></i>
+                    </label>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      name="flight"
+                      value={flight}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+              </div>
+
               <div className="form-group">
                 <label htmlFor="name">Name:</label>
                 <input
@@ -165,4 +295,4 @@ function HolidayPackagesForm(props) {
   );
 }
 
-export default HolidayPackagesForm;
+export default InquiryDetialsForm;

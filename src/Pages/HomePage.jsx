@@ -2,12 +2,12 @@ import React from "react";
 import SectionAbout from "../Components/SectionAbout";
 import SectionPortfolio from "../Components/SectionPortfolio";
 import SectionStats from "../Components/SectionStats";
-function HomePage(props) {
+function HomePage({ title, data }) {
   return (
     <>
       <SectionAbout />
       <SectionStats />
-      <SectionPortfolio />
+      <SectionPortfolio heading={title} data={data} />
     </>
   );
 }

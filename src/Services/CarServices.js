@@ -1,9 +1,9 @@
 import TourImg from "../Images/MYTP-xyz-tour.jpg";
-const Tours = [
+const Cars = [
   {
     key: "tour1",
     src: { TourImg },
-    title: "Rishikesh",
+    title: "Car One",
     rate: 4.5,
     place: "City/state/Country",
     description:
@@ -49,7 +49,7 @@ const Tours = [
   {
     key: "tour2",
     src: { TourImg },
-    title: "Manali",
+    title: "Car Two",
     rate: 1,
     place: "City/state/Country",
     description:
@@ -71,7 +71,7 @@ const Tours = [
   {
     key: "tour3",
     src: { TourImg },
-    title: "Goa",
+    title: "Car Three",
     rate: 4,
     place: "City/state/Country",
     description:
@@ -92,4 +92,4 @@ const Tours = [
   },
 ];
 
-export { Tours };
+export { Cars };

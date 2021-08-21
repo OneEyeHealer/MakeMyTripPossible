@@ -1,8 +1,10 @@
-import React from "react";
-import { Tours } from "../Services/TourService";
+import React, { useState } from "react";
+// import { Tours } from "../Services/TourService"k;
 import TourBox from "./Common/TourBox";
-import TourHoverImgBox from "./Common/TourHoverImgBox";
+import Details from "./Common/Details";
 function SectionPortfolio({
+  heading,
+  data,
   key,
   title,
   src,
@@ -15,6 +17,10 @@ function SectionPortfolio({
   discount,
   rate,
 }) {
+  const [tourData, setTourData] = useState({});
+  const [tDays, setTDays] = useState([]);
+  const [showTour, setShowTour] = useState(true);
+
   const rating = {
     count: 5,
     edit: false,
@@ -28,32 +34,44 @@ function SectionPortfolio({
     <>
       <section className="portfolio-flyer py-5" id="gallery">
         <div className="container pt-lg-3 pb-md-5">
-          <h3 className="tittle text-center my-lg-5 my-3">Our Recent Tours</h3>
+          <h3 className="tittle text-center my-3">
+            {heading} {!showTour ? "Details" : ""}
+          </h3>
 
-          <div className="row news-grids pb-lg-5 mt-3 mt-lg-5">
-            {Tours.map((tour) => (
-              <TourBox
-                key={tour[key]}
-                title={tour[title]}
-                src={tour[src]}
-                place={tour[place]}
-                description={tour[description]}
-                day={tour[day]}
-                night={tour[night]}
-                date={tour[date]}
-                amount={tour[amount]}
-                discount={tour[discount]}
-                value={tour[rate]}
-                {...rating}
-              />
-            ))}
-            {/* <TourBox amount={8500} discount={20} {...rating} value={5} />
-            <TourBox amount={6500} discount={20} {...rating} value={1.5} />
-            <TourBox amount={7500} discount={20} {...rating} value={3.5} /> */}
-          </div>
+          {showTour ? (
+            <div className="row news-grids pb-lg-5 mt-3">
+              {data.map((tour) => (
+                <TourBox
+                  setTourData={setTourData}
+                  setShowTour={setShowTour}
+                  setTDays={setTDays}
+                  tourObj={tour}
+                  key={tour[key]}
+                  ikey={tour[key]}
+                  title={tour[title]}
+                  src={tour[src]}
+                  place={tour[place]}
+                  description={tour[description]}
+                  day={tour[day]}
+                  night={tour[night]}
+                  date={tour[date]}
+                  amount={tour[amount]}
+                  discount={tour[discount]}
+                  value={tour[rate]}
+                  {...rating}
+                />
+              ))}
+            </div>
+          ) : (
+            <Details
+              setTourData={setTourData}
+              setShowTour={setShowTour}
+              tourData={tourData}
+              tDays={tDays}
+            />
+          )}
         </div>
       </section>
-      <TourHoverImgBox />
     </>
   );
 }

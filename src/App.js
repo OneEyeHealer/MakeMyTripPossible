@@ -11,9 +11,14 @@ import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ContactPage from "./Pages/ContactPage";
-import HolidayPackagesForm from "./Components/HolidayPackagesForm";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
+import InquiryDetialsForm from "./Components/InquiryDetailsForm";
+import ServicePage from "./Pages/ServicePage";
+import { Buses } from "./Services/BusService";
+import { Tours } from "./Services/TourService";
+import { Hotels } from "./Services/HotelService";
+import { Flights } from "./Services/FlightService";
 
 function App() {
   return (
@@ -25,12 +30,47 @@ function App() {
           <Route
             path="/home"
             exact
-            render={(props) => <HomePage {...props} />}
+            render={(props) => (
+              <HomePage title="Our Recent Tours" data={Tours} {...props} />
+            )}
           />
           <Route
             path="/about-us"
             exact
             render={(props) => <AboutPage {...props} />}
+          />
+          {/* <Route path="/tour-details" render={() => <TourDetailPage />} /> */}
+          <Route
+            path="/service/bus"
+            render={(props) => (
+              <ServicePage title="Our Bus Services" data={Buses} {...props} />
+            )}
+          />
+          <Route
+            path="/service/hotel"
+            render={(props) => (
+              <ServicePage
+                title="Our Hotel Services"
+                data={Hotels}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/service/car"
+            render={(props) => (
+              <ServicePage title="Our Car Services" {...props} />
+            )}
+          />
+          <Route
+            path="/service/flight"
+            render={(props) => (
+              <ServicePage
+                title="Our Flights Services"
+                data={Flights}
+                {...props}
+              />
+            )}
           />
           <Route path="/contact-us" component={ContactPage} />
           <Route path="/not-found" component={NotFoundPage} />
@@ -38,7 +78,7 @@ function App() {
           <Redirect to="/not-found" />
         </Switch>
       </div>
-      <HolidayPackagesForm />
+      <InquiryDetialsForm />
       <Footer />
     </Router>
   );

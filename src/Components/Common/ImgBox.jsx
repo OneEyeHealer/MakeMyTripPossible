@@ -1,12 +1,11 @@
 import React from "react";
-import { worldTrip } from "../../Services/ImgService";
 
-function ImgBox(props) {
+function ImgBox({ src }) {
   return (
     <>
       <div className="col-lg-6 p-0">
         <div className="img-effect">
-          <img src={worldTrip} alt="world Trip" className="img-fluid image1" />
+          <img src={src} alt="world Trip" className="img-fluid image1" />
         </div>
       </div>
     </>

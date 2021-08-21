@@ -1,8 +1,12 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-import { Link } from "react-router-dom";
 import { DiscountAmount } from "../../util/PriceCount";
 function TourBox({
+  setTourData,
+  setShowTour,
+  setTDays,
+  tourObj,
+  ikey,
   title,
   src,
   place,
@@ -12,16 +16,22 @@ function TourBox({
   date,
   amount,
   discount,
+  overview,
   ...rating
 }) {
+  const handleTour = (tourId) => {
+    setTourData(tourId === tourObj.key ? tourObj : {});
+    setTDays(tourId === tourObj.key ? tourObj.days : []);
+    setShowTour(false);
+  };
   return (
     <>
       <div className="col-lg-4 gal-img mt-lg-4">
         <span className="onsale">{discount}% off</span>
         <div className="gal-info">
-          <Link to="destination">
-            <img src={src.TourImg} alt="Tour-name" className="img-fluid" />
-          </Link>
+          {/* <Link to="destination"> */}
+          <img src={src.TourImg} alt="Tour-name" className="img-fluid" />
+          {/* </Link> */}
           <div className="property-info-list">
             <div className="float-end price-tag">
               <span className="original-amount">
@@ -46,7 +56,12 @@ function TourBox({
               </div>
               <br />
               <div className="facilities-list clearfix">
-                <p>{description}</p>
+                <p className="text-light">{description}</p>
+              </div>
+              <div className="text-center banner-info-w3ls">
+                <span className="btn" onClick={() => handleTour(ikey)}>
+                  Know more
+                </span>
               </div>
             </div>
             <div className="footer-properties">
