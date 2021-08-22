@@ -19,6 +19,13 @@ import { Buses } from "./Services/BusService";
 import { Tours } from "./Services/TourService";
 import { Hotels } from "./Services/HotelService";
 import { Flights } from "./Services/FlightService";
+import {
+  culturalData,
+  natureData,
+  popularData,
+  spritualData,
+} from "./Services/DestinationService";
+import ImagesPage from "./Pages/ImagesPage";
 
 function App() {
   return (
@@ -68,6 +75,46 @@ function App() {
               <ServicePage
                 title="Our Flights Services"
                 data={Flights}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/destination/popular-places"
+            render={(props) => (
+              <ImagesPage
+                title="Popular Destination"
+                data={popularData}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/destination/nature-places"
+            render={(props) => (
+              <ImagesPage
+                title="Nature Destination"
+                data={natureData}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/destination/spritual-places"
+            render={(props) => (
+              <ImagesPage
+                title="Sptitual Destination"
+                data={spritualData}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/destination/cultural-places"
+            render={(props) => (
+              <ImagesPage
+                title="Cultural Destination"
+                data={culturalData}
                 {...props}
               />
             )}

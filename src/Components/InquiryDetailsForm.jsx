@@ -12,8 +12,14 @@ import {
 } from "../Services/ImgService";
 
 function InquiryDetialsForm() {
+  const [isBus, setIsBus] = useState(false);
+  const [isCar, setIsCar] = useState(false);
+  const [isHotel, setIsHotel] = useState(false);
+  const [isGroup, setIsGroup] = useState(false);
+  const [isHoliday, setIsHoliday] = useState(false);
+  const [isFlight, setIsFlight] = useState(false);
   const [data, setdata] = useState({
-    bus: "",
+    bus: isBus,
     car: "",
     hotel: "",
     group: "",
@@ -48,35 +54,44 @@ function InquiryDetialsForm() {
 
   const handleChange = (e) => {
     setdata({ ...data, [e.target.name]: e.target.value });
+    setIsBus(!isBus);
+    setIsCar(!isCar);
+    setIsHotel(!isHotel);
+    setIsGroup(!isGroup);
+    setIsHoliday(!isHoliday);
+    setIsFlight(!isFlight);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify([
-          [
-            bus,
-            car,
-            hotel,
-            group,
-            holiday,
-            flight,
-            name,
-            phone,
-            email,
-            place,
-            city,
-            destination,
-            ondate,
-            members,
-            new Date().toLocaleString(),
-          ],
-        ]),
-      });
+      const response = await fetch(
+        "https://v1.nocodeapi.com/mytp/google_sheets/qgcJUNOfTDWzEnOT?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            [
+              bus,
+              car,
+              hotel,
+              group,
+              holiday,
+              flight,
+              name,
+              phone,
+              email,
+              place,
+              city,
+              destination,
+              ondate,
+              members,
+              new Date().toLocaleString(),
+            ],
+          ]),
+        }
+      );
       await response.json();
       notify(
         "Your Response has been submitted. We will contact you Shortly !!"
@@ -98,6 +113,12 @@ function InquiryDetialsForm() {
         ondate: "",
         members: "",
       });
+      setIsBus(!isBus);
+      setIsCar(!isCar);
+      setIsHotel(!isHotel);
+      setIsGroup(!isGroup);
+      setIsHoliday(!isHoliday);
+      setIsFlight(!isFlight);
     } catch (error) {}
   };
   const notify = (message) => toast.success(`${message}`);
@@ -111,7 +132,13 @@ function InquiryDetialsForm() {
               <h3 className="tittle text-center mb-lg-5 mb-3 px-lg-5">
                 {InquiryFormData.title}
               </h3>
-              <h6 className="mb-5">Note: {InquiryFormData.note}</h6>
+              <h6 className="mb-5">
+                Note: {InquiryFormData.note} and{" "}
+                <span className="text-danger">
+                  <sup>*</sup>
+                </span>
+                required fields
+              </h6>
               <div className="row">
                 <div className="col-2">
                   <div className="form-group" data-tip="Bus Service">
@@ -122,7 +149,8 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="bus"
-                      value={bus}
+                      checked={isBus}
+                      value={!isBus}
                       onChange={handleChange}
                     />
                   </div>
@@ -136,7 +164,7 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="car"
-                      value={car}
+                      value={!isCar}
                       onChange={handleChange}
                     />
                   </div>
@@ -150,7 +178,7 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="hotel"
-                      value={hotel}
+                      value={!isHotel}
                       onChange={handleChange}
                     />
                   </div>
@@ -164,7 +192,7 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="group"
-                      value={group}
+                      value={!isGroup}
                       onChange={handleChange}
                     />
                   </div>
@@ -178,7 +206,7 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="holiday"
-                      value={holiday}
+                      value={!isHoliday}
                       onChange={handleChange}
                     />
                   </div>
@@ -192,7 +220,7 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="flight"
-                      value={flight}
+                      value={!isFlight}
                       onChange={handleChange}
                     />
                   </div>
@@ -200,34 +228,52 @@ function InquiryDetialsForm() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="name">Name:</label>
+                <label htmlFor="name">
+                  Name:
+                  <span className="text-danger">
+                    <sup>*</sup>
+                  </span>
+                </label>
                 <input
                   type="text"
                   className="form-control"
                   name="name"
                   value={name}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="phone">Phone:</label>
+                <label htmlFor="phone">
+                  Phone:
+                  <span className="text-danger">
+                    <sup>*</sup>
+                  </span>
+                </label>
                 <input
                   type="text"
                   className="form-control"
                   name="phone"
                   value={phone}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">
+                  Email:
+                  <span className="text-danger">
+                    <sup>*</sup>
+                  </span>
+                </label>
                 <input
                   type="email"
                   className="form-control"
                   name="email"
                   value={email}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -261,23 +307,35 @@ function InquiryDetialsForm() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="ondate">Preferred Date:</label>
+                <label htmlFor="ondate">
+                  Preferred Date:{" "}
+                  <span className="text-danger">
+                    <sup>*</sup>
+                  </span>
+                </label>
                 <input
                   type="date"
                   className="form-control"
                   name="ondate"
                   value={ondate}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="members">Members:</label>
+                <label htmlFor="members">
+                  Members:
+                  <span className="text-danger">
+                    <sup>*</sup>
+                  </span>
+                </label>
                 <input
                   type="text"
                   className="form-control"
                   name="members"
                   value={members}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="my-3">
