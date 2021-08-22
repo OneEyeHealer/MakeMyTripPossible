@@ -226,3 +226,76 @@ article p {
 .places-img h5:hover {
   color: var(--border-line);
 }
+
+.line {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+  color: rgb(168, 178, 209);
+}
+
+.leftLine {
+  left: 1.5rem;
+  right: auto;
+}
+
+.vertical-line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin: 0px;
+}
+
+.vertical-line li {
+  padding: 14px 15px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.vertical-line li a i {
+  color: rgb(58, 179, 62);
+  font-size: 6em;
+}
+
+.vertical-line li:hover,
+.vertical-line li:focus {
+  justify-content: space-around;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 14px 10px;
+}
+
+.remove-anchore-link a,
+.remove-anchore-link li {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+.navbar {
+  padding: 0 !important;
+  background-color: #f2f2f2 !important;
+}
+.left-content {
+  left: 0;
+}
+.right-content {
+  right: 0;
+}
+.common-content {
+  position: absolute;
+  background-color: var(--text-white);
+  top: 0;
+  padding: 0em 1em;
+  font-size: 18px;
+}
+
+.top-nav-icon {
+  color: var(--border-line);
+}
+
+@media (max-width: 768px) {
+  .mobile-view {
+    display: none !important;
+  }
+}

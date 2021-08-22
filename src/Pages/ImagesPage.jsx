@@ -9,7 +9,7 @@ const ImagesPage = ({ data, title }) => {
             <h3 className="tittle text-center px-lg-5 my-5">{title}</h3>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 mb-4">
               {data.map((place) => (
-                <div className="col mb-4">
+                <div key={place.key} className="col mb-4">
                   <div className="card bg-dark text-white place-box">
                     <img src={place.src} className="card-img" alt={place.alt} />
                     <div className="card-img-overlay places-img">

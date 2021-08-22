@@ -6,27 +6,74 @@ import {
   bus,
   contact,
   destination,
+  envelope,
+  facbook,
   flight,
   home,
   hotel,
+  insagram,
+  linkedin,
+  phone,
   popular,
+  twitter,
 } from "../Services/ImgService";
+import { ContactInfo } from "../Services/ContactService";
 
 function NavHeader({ pathname }) {
   return (
     <>
       <header className="header bg-light">
+        <nav className="navbar navbar-light bg-light">
+          <div className="container-fluid">
+            <ul className="top-right-info">
+              <li className="mr-1">
+                <a href={`tel:${ContactInfo.PhoneOne}`} className="text-dark">
+                  <i className={phone}></i>&nbsp;{ContactInfo.PhoneOne}
+                </a>
+              </li>
+              <li className="mobile-view">
+                <a href={`mailto:${ContactInfo.EmailId}`} className="text-dark">
+                  <i className={envelope}></i>&nbsp;{ContactInfo.EmailId}
+                </a>
+              </li>
+            </ul>
+            <div className="d-flex mobile-view">
+              <ul className="top-right-info d-inline">
+                <li className="mr-1">
+                  <a href={facbook} target="_blank" rel="noreferrer">
+                    <span className="fab fa-facebook-f"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href={twitter} target="_blank" rel="noreferrer">
+                    <span className="fab fa-twitter"></span>
+                  </a>
+                </li>
+                <li className="mx-1">
+                  <a href={linkedin} target="_blank" rel="noreferrer">
+                    <span className="fab fa-linkedin-in"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href={insagram} target="_blank" rel="noreferrer">
+                    <span className="fab fa-instagram"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
         <div className="container">
           <nav className="pt-1">
             <div id="logo">
               <h1>
-                <a className="navbar-brand logo-name" href="/">
+                <Link className="navbar-brand logo-name" href="/">
                   <img src={logo} alt="MYTP-logo" width="40px" height="auto" />
                   <span className="logo-name">
                     <span className="logo-color">Make</span>Your
                     <span className="logo-color">Trip</span>Possible
                   </span>
-                </a>
+                </Link>
               </h1>
             </div>
 

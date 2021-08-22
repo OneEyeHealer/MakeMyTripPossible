@@ -38,7 +38,7 @@ function SectionContact({ Address, EamilId, PhoneOne, PhoneTwo }) {
                             <i className="fa fa-envelope"></i>
                             <h4>Email:</h4>
                             <p>
-                              <a href={`mailto:{EmailId}`}>
+                              <a href={`mailto:${ContactInfo.EmailId}`}>
                                 {ContactInfo.EmailId}
                               </a>
                             </p>
@@ -48,12 +48,8 @@ function SectionContact({ Address, EamilId, PhoneOne, PhoneTwo }) {
                             <i className="fa fa-phone"></i>
                             <h4>Call:</h4>
                             <p>
-                              <a href={`tel:{ContactInfo.PhoneOne}`}>
+                              <a href={`tel:${ContactInfo.PhoneOne}`}>
                                 +91-{ContactInfo.PhoneOne}
-                              </a>
-                              , &nbsp;&nbsp;
-                              <a href={`tel:{ContactInfo.PhoneTwo}`}>
-                                +91-{ContactInfo.PhoneTwo}
                               </a>
                             </p>
                           </div>

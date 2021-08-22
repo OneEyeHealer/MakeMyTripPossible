@@ -26,11 +26,13 @@ import {
   spritualData,
 } from "./Services/DestinationService";
 import ImagesPage from "./Pages/ImagesPage";
+import SideNav from "./Components/SideNav";
 
 function App() {
   return (
     <Router>
       <Route render={(props) => <Navbar {...props} />} />
+      <SideNav phoneNumber="9953880159" />
       <ToastContainer />
       <div className="main">
         <Switch>
@@ -103,7 +105,7 @@ function App() {
             path="/destination/spritual-places"
             render={(props) => (
               <ImagesPage
-                title="Sptitual Destination"
+                title="Spritual Destination"
                 data={spritualData}
                 {...props}
               />

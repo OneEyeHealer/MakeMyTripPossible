@@ -1,4 +1,5 @@
 import React from "react";
+import { facbook, insagram, linkedin, twitter } from "../Services/ImgService";
 
 function Footer(props) {
   return (
@@ -16,22 +17,22 @@ function Footer(props) {
             <div className="col-md-4"> */}
               <ul className="top-right-info">
                 <li className="mr-1">
-                  <a href="/">
+                  <a href={facbook} target="_blank" rel="noreferrer">
                     <span className="fab fa-facebook-f"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="/">
+                  <a href={twitter} target="_blank" rel="noreferrer">
                     <span className="fab fa-twitter"></span>
                   </a>
                 </li>
                 <li className="mx-1">
-                  <a href="/">
-                    <span className="fab fa-google-plus"></span>
+                  <a href={linkedin} target="_blank" rel="noreferrer">
+                    <span className="fab fa-linkedin-in"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="/">
+                  <a href={insagram} target="_blank" rel="noreferrer">
                     <span className="fab fa-instagram"></span>
                   </a>
                 </li>

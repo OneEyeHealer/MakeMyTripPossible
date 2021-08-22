@@ -1,7 +1,9 @@
 // contanats
 export const NotFoundImg =
   "https://www.kindpng.com/picc/m/255-2550142_404-not-found-transparent-hd-png-download.png";
-
+//top nav icons
+export const phone = "fad fa-phone-plus top-nav-icon";
+export const envelope = "fad fa-envelope top-nav-icon";
 // navbar icons
 export const home = "fad fa-home";
 export const about = "fad fa-book-reader";
@@ -42,3 +44,10 @@ export const flight = "fad fa-plane-alt";
 
 // close icon
 export const close = "fad fa-times";
+
+//social links
+export const facbook =
+  "https://www.facebook.com/profile.php?id=100070701072066";
+export const insagram = "https://instagram.com/makeyourtrippossible";
+export const linkedin = "/";
+export const twitter = "/";

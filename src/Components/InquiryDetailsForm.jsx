@@ -35,31 +35,11 @@ function InquiryDetialsForm() {
     members: "",
   });
 
-  const {
-    bus,
-    car,
-    hotel,
-    group,
-    holiday,
-    flight,
-    name,
-    phone,
-    email,
-    place,
-    city,
-    destination,
-    ondate,
-    members,
-  } = data;
+  const { name, phone, email, place, city, destination, ondate, members } =
+    data;
 
   const handleChange = (e) => {
     setdata({ ...data, [e.target.name]: e.target.value });
-    setIsBus(!isBus);
-    setIsCar(!isCar);
-    setIsHotel(!isHotel);
-    setIsGroup(!isGroup);
-    setIsHoliday(!isHoliday);
-    setIsFlight(!isFlight);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -73,12 +53,12 @@ function InquiryDetialsForm() {
           },
           body: JSON.stringify([
             [
-              bus,
-              car,
-              hotel,
-              group,
-              holiday,
-              flight,
+              isBus,
+              isCar,
+              isHotel,
+              isGroup,
+              isHoliday,
+              isFlight,
               name,
               phone,
               email,
@@ -113,12 +93,12 @@ function InquiryDetialsForm() {
         ondate: "",
         members: "",
       });
-      setIsBus(!isBus);
-      setIsCar(!isCar);
-      setIsHotel(!isHotel);
-      setIsGroup(!isGroup);
-      setIsHoliday(!isHoliday);
-      setIsFlight(!isFlight);
+      setIsBus(false);
+      setIsCar(false);
+      setIsHotel(false);
+      setIsGroup(false);
+      setIsHoliday(false);
+      setIsFlight(false);
     } catch (error) {}
   };
   const notify = (message) => toast.success(`${message}`);
@@ -151,7 +131,7 @@ function InquiryDetialsForm() {
                       name="bus"
                       checked={isBus}
                       value={!isBus}
-                      onChange={handleChange}
+                      onChange={() => setIsBus(!isBus)}
                     />
                   </div>
                 </div>
@@ -164,8 +144,9 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="car"
+                      checked={isCar}
                       value={!isCar}
-                      onChange={handleChange}
+                      onChange={() => setIsCar(!isCar)}
                     />
                   </div>
                 </div>
@@ -178,8 +159,9 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="hotel"
+                      checked={isHotel}
                       value={!isHotel}
-                      onChange={handleChange}
+                      onChange={() => setIsHotel(!isHotel)}
                     />
                   </div>
                 </div>
@@ -192,8 +174,9 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="group"
+                      checked={isGroup}
                       value={!isGroup}
-                      onChange={handleChange}
+                      onChange={() => setIsGroup(!isGroup)}
                     />
                   </div>
                 </div>
@@ -206,8 +189,9 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="holiday"
+                      checked={isHoliday}
                       value={!isHoliday}
-                      onChange={handleChange}
+                      onChange={() => setIsHoliday(!isHoliday)}
                     />
                   </div>
                 </div>
@@ -220,8 +204,9 @@ function InquiryDetialsForm() {
                       type="checkbox"
                       className="form-check-input"
                       name="flight"
+                      checked={isFlight}
                       value={!isFlight}
-                      onChange={handleChange}
+                      onChange={() => setIsFlight(!isFlight)}
                     />
                   </div>
                 </div>
@@ -251,7 +236,7 @@ function InquiryDetialsForm() {
                   </span>
                 </label>
                 <input
-                  type="text"
+                  type="phone"
                   className="form-control"
                   name="phone"
                   value={phone}

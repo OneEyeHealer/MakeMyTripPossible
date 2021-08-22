@@ -1,8 +1,8 @@
 export const ContactInfo = {
   Address: "Delhi, India",
-  EmailId: "MakeYourTripPossible@gmail.com",
-  PhoneOne: "9876543210",
-  PhoneTwo: "9887654321",
+  EmailId: "info@makeyourtrippossible.com",
+  PhoneOne: "9953880159",
+  PhoneTwo: "",
 };
 
 export const InquiryFormData = {
