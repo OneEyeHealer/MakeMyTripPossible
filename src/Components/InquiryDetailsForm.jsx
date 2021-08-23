@@ -112,13 +112,10 @@ function InquiryDetialsForm() {
               <h3 className="tittle text-center mb-lg-5 mb-3 px-lg-5">
                 {InquiryFormData.title}
               </h3>
-              <h6 className="mb-5">
-                Note: {InquiryFormData.note} and{" "}
-                <span className="text-danger">
-                  <sup>*</sup>
-                </span>
+              <div className="my-3">
+                <sup className="text-danger">*</sup>
                 required fields
-              </h6>
+              </div>
               <div className="row">
                 <div className="col-2">
                   <div className="form-group" data-tip="Bus Service">
@@ -327,9 +324,12 @@ function InquiryDetialsForm() {
                 <input
                   type="submit"
                   value="Submit"
-                  className="btn btn-primary"
+                  className="btn btn-submit"
                 />
               </div>
+              <p className="mb-5 text-dark">
+                <b>Note:</b> {InquiryFormData.note} <br />
+              </p>
             </form>
           </div>
         </div>

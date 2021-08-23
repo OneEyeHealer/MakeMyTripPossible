@@ -210,10 +210,9 @@ nav a {
   color: inherit;
   font-size: 15px;
   letter-spacing: 1px;
-  padding: 10px 0;
   font-size: 15px;
   letter-spacing: 1px;
-  padding: 0 14px;
+  padding: 0 5px;
 }
 
 nav ul li ul li:hover {
@@ -509,7 +508,8 @@ a.contact:hover {
 }
 
 .banner-info-w3ls a,
-.banner-info-w3ls span {
+.banner-info-w3ls span,
+.btn-submit {
   background: #ef9632;
   padding: 11px 30px;
   font-size: 14px;
@@ -525,7 +525,8 @@ a.contact:hover {
 }
 
 .banner-info-w3ls a:hover,
-.banner-info-w3ls span:hover {
+.banner-info-w3ls span:hover,
+.btn-submit:hover {
   background: #ff3838;
   color: #fff;
 }
@@ -1655,7 +1656,7 @@ a.move-top span {
   .banner-info-w3ls {
     margin-top: 0em;
     padding-right: 0;
-    margin: 2em 0;
+    margin: 5em 0 2em 0;
   }
 
   .navbar-light .navbar-nav .nav-link,
@@ -2012,7 +2013,7 @@ a.move-top span {
   .banner-info-w3ls {
     margin-top: 0em;
     padding-right: 15px;
-    margin: 0em 0 2em 0;
+    margin: 4em 0 2em 0;
   }
 
   .count-title {
@@ -2064,7 +2065,7 @@ a.move-top span {
   .banner-info-w3ls {
     margin-top: 0em;
     padding-right: 15px;
-    margin: 0em 0 0em 0;
+    margin: 4em 0 0em 0;
   }
 
   .banner-info-w3ls h3 {

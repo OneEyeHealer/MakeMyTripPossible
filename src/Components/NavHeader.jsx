@@ -67,7 +67,7 @@ function NavHeader({ pathname }) {
           <nav className="pt-1">
             <div id="logo">
               <h1>
-                <Link className="navbar-brand logo-name" href="/">
+                <Link className="navbar-brand logo-name" to="/">
                   <img src={logo} alt="MYTP-logo" width="40px" height="auto" />
                   <span className="logo-name">
                     <span className="logo-color">Make</span>Your
