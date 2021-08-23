@@ -63,7 +63,7 @@ function NavHeader({ pathname }) {
             </div>
           </div>
         </nav>
-        <div className="container">
+        <div className="container-fluid p-0">
           <nav className="pt-1">
             <div id="logo">
               <h1>
@@ -81,7 +81,7 @@ function NavHeader({ pathname }) {
               <i className="far fa-tasks" />
             </label>
             <input type="checkbox" id="drop" />
-            <ul className="menu mt-2">
+            <ul className="menu mt-2 border-radius-class">
               <li className="active">
                 <Link to="/home">
                   <i className={home}></i>&nbsp;Home

@@ -150,6 +150,13 @@ header {
   min-width: 4em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: fixed;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.border-radius-class {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .toggle,
@@ -354,6 +361,7 @@ li > a:only-child:after {
     padding: 15px 0;
     text-align: center;
     width: 100%;
+    border: none !important;
   }
 
   /* Change menu item's width to 100% */
