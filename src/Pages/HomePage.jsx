@@ -5,9 +5,9 @@ import SectionStats from "../Components/SectionStats";
 function HomePage({ title, data }) {
   return (
     <>
+      <SectionPortfolio heading={title} data={data} />
       <SectionAbout />
       <SectionStats />
-      <SectionPortfolio heading={title} data={data} />
     </>
   );
 }

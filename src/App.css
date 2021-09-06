@@ -331,7 +331,7 @@ li > a:only-child:after {
     cursor: pointer !important;
     margin-bottom: 0;
     text-transform: uppercase;
-    /* margin-top: 0.7em; */
+    margin-right: 1em;
   }
   .toggle i {
     color: inherit;

@@ -50,8 +50,14 @@ code {
   .logo-name {
     display: initial;
   }
+  .vertical-line li a i {
+    font-size: 4em !important;
+    position: relative;
+    left: -31px;
+  }
 }
-@media (max-width: 325px) {
+
+@media (max-width: 366px) {
   .logo-name {
     display: none;
   }
@@ -297,4 +303,10 @@ article p {
   .mobile-view {
     display: none !important;
   }
+}
+
+.slogan {
+  position: relative;
+  top: 20vh;
+  transform: translateY(-50%);
 }
