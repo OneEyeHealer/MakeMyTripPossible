@@ -36,8 +36,14 @@ function Details({
           {/* <hr /> */}
           <h3 className="tittle text-center mt-3">{tourData[title]}</h3>
           <div className="container">
-            <h2 className="overview py-2 px-3">Overview</h2>
-            <p>{tourData.overview}</p>
+            <h2 className="overview py-2 px-3">
+              {" "}
+              <i className="fad fa-thumbtack" /> Overview
+            </h2>
+            <pre>{tourData.overview}</pre>
+            <div className="text-center banner-info-w3ls">
+              <span className="btn">Book Now</span>
+            </div>
             <div className="overview-icons">
               <span title="bus">
                 <i className={bus}></i>
@@ -66,6 +72,10 @@ function Details({
             />
           ))}
           <hr />
+          <div className="thanks-giving">
+            <p>Thanks and Regards </p>
+            <p>Team makeyourtrippossible</p>
+          </div>
         </div>
       ) : null}
     </>

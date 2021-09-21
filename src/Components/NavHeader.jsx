@@ -2,8 +2,9 @@ import React from "react";
 import logo from "../Images/MYTP_LOGO2.png";
 import { Link } from "react-router-dom";
 import {
-  about,
+  // about,
   bus,
+  city,
   contact,
   destination,
   envelope,
@@ -14,10 +15,10 @@ import {
   insagram,
   linkedin,
   phone,
-  popular,
   twitter,
 } from "../Services/ImgService";
 import { ContactInfo } from "../Services/ContactService";
+import { blogs } from "../Services/DestinationService";
 
 function NavHeader({ pathname }) {
   return (
@@ -70,8 +71,10 @@ function NavHeader({ pathname }) {
                 <Link className="navbar-brand logo-name" to="/">
                   <img src={logo} alt="MYTP-logo" width="40px" height="auto" />
                   <span className="logo-name">
-                    <span className="logo-color">Make</span>Your
-                    <span className="logo-color">Trip</span>Possible
+                    <span className="logo-color">Make</span>
+                    <span>Your</span>
+                    <span className="logo-color">Trip</span>
+                    <span>Possible</span>
                   </span>
                 </Link>
               </h1>
@@ -87,11 +90,11 @@ function NavHeader({ pathname }) {
                   <i className={home}></i>&nbsp;Home
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/about-us">
                   <i className={about}></i>&nbsp;About
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/service/bus">
                   <i className={bus}></i>&nbsp;Bus
@@ -118,7 +121,24 @@ function NavHeader({ pathname }) {
                 </Link>
                 <input type="checkbox" id="drop-2" />
                 <ul>
+                  {blogs.map((blog) => (
+                    <li key={blog.key}>
+                      <a href={blog.href} target="_blank" rel="noreferrer">
+                        <i className={city}></i>&nbsp;{blog.title}
+                      </a>
+                    </li>
+                  ))}
+                  {/* <li>
+                    <Link to="/destination/popular-places">
+                      <i className={city}></i>&nbsp;Delhi
+                    </Link>
+                  </li>
                   <li>
+                    <Link to="/destination/popular-places">
+                      <i className={city}></i>&nbsp;Himachal
+                    </Link>
+                  </li> */}
+                  {/* <li>
                     <Link to="/destination/popular-places">
                       <i className={popular}></i>&nbsp;Popular places
                     </Link>
@@ -138,7 +158,7 @@ function NavHeader({ pathname }) {
                       <i className="fad fa-praying-hands"></i>&nbsp;Cultural
                       places
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li>

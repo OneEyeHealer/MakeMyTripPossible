@@ -2,10 +2,10 @@ import TourImg from "../Images/MYTP-xyz-tour.jpg";
 const Buses = [
   {
     key: "tour1",
-    src: { TourImg },
+    src: TourImg,
     title: "Bus One",
     rate: 4.5,
-    place: "City/state/Country",
+    place: ["City","state","Country"],
     description:
       "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
     day: 3,
@@ -48,10 +48,10 @@ const Buses = [
   },
   {
     key: "tour2",
-    src: { TourImg },
+    src: TourImg,
     title: "Bus Two",
     rate: 1,
-    place: "City/state/Country",
+    place: ["City","state","Country"],
     description:
       "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
     day: 2,
@@ -70,10 +70,10 @@ const Buses = [
   },
   {
     key: "tour3",
-    src: { TourImg },
+    src: TourImg,
     title: "Bus Three",
     rate: 4,
-    place: "City/state/Country",
+    place: ["City","state","Country"],
     description:
       "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
     day: 2,

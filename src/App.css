@@ -1,3 +1,7 @@
+:root {
+  --theme-color: #0f3285;
+  --border-line: #ef9632;
+}
 html,
 body {
   margin: 0;
@@ -230,11 +234,11 @@ nav ul li ul li:hover {
 /* Background color change on Hover */
 
 nav li a:hover {
-  color: #ef9632;
+  color: var(--border-line);
 }
 
 .menu li.active a {
-  color: #ef9632;
+  color: var(--border-line);
 }
 
 /* Hide Dropdowns by Default
@@ -510,7 +514,7 @@ a.contact:hover {
 }
 
 .banner-info-w3ls h2 {
-  color: #ef9632;
+  color: var(--border-line);
   font-size: 0.9em;
   text-transform: uppercase;
   font-weight: 300;
@@ -519,7 +523,7 @@ a.contact:hover {
 .banner-info-w3ls a,
 .banner-info-w3ls span,
 .btn-submit {
-  background: #ef9632;
+  background: var(--border-line);
   padding: 11px 30px;
   font-size: 14px;
   letter-spacing: 1px;
@@ -536,8 +540,9 @@ a.contact:hover {
 .banner-info-w3ls a:hover,
 .banner-info-w3ls span:hover,
 .btn-submit:hover {
-  background: #ff3838;
-  color: #fff;
+  background: #fff;
+  border: 2px solid var(--border-line);
+  color: var(--theme-color);
 }
 
 section.banner {
@@ -647,7 +652,7 @@ h3.tittle {
 
 .feature-grids span {
   font-size: 2em;
-  color: #ef9632;
+  color: var(--border-line);
   margin: 0.5em 0;
 }
 
@@ -667,7 +672,7 @@ h3.tittle {
 /*-- //features --*/
 .counter span {
   font-size: 2.3em;
-  color: #ef9632;
+  color: var(--border-line);
   margin: 0;
 }
 
@@ -729,7 +734,7 @@ h3.tittle {
 
 .sub-tittle-team {
   font-size: 0.67em;
-  color: #ef9632;
+  color: var(--border-line);
   font-weight: 700;
   letter-spacing: 2px;
   display: block;
@@ -881,7 +886,7 @@ ul.tic-info li span {
 
 .detail ul li:hover span,
 .footer-properties:hover a {
-  color: #ef9632;
+  color: var(--border-line);
 }
 
 .detail .location a,
@@ -928,8 +933,10 @@ section#gallery {
 }
 
 .gal-img img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   background: #fff;
-  height: auto;
+  height: 250px;
   width: 100%;
 }
 .gal-info {
@@ -957,7 +964,7 @@ p.sub-test {
 }
 
 p.sub-test span {
-  color: #ef9632;
+  color: var(--border-line);
   font-size: 3em;
   margin-right: 0.3em;
 }
@@ -1014,7 +1021,7 @@ section.hand-crafted p {
   padding: 0.5em 1em;
   font-weight: 600;
   left: 4%;
-  color: #ef9632;
+  color: var(--border-line);
 }
 
 /*--/--*/

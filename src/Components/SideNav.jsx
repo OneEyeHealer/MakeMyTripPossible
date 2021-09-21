@@ -11,7 +11,7 @@ const SideNav = ({ phoneNumber }) => {
         <ul className="social_sytle-list vertical-line">
           <li>
             <a href={url} target="_blank" rel="noreferrer">
-              <i className="fab fa-whatsapp" />
+              <i className="fab fa-whatsapp-square" />
             </a>
           </li>
         </ul>

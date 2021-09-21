@@ -8,7 +8,6 @@ import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import HomePage from "./Pages/HomePage";
-import AboutPage from "./Pages/AboutPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ContactPage from "./Pages/ContactPage";
 import "./App.css";
@@ -42,11 +41,6 @@ function App() {
             render={(props) => (
               <HomePage title="Our Recent Tours" data={Tours} {...props} />
             )}
-          />
-          <Route
-            path="/about-us"
-            exact
-            render={(props) => <AboutPage {...props} />}
           />
           {/* <Route path="/tour-details" render={() => <TourDetailPage />} /> */}
           <Route

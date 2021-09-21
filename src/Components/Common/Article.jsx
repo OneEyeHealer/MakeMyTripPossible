@@ -7,10 +7,13 @@ function Article({ day, title, brief }) {
         <article>
           <div className="container pt-3">
             <div className="day-bg">
-              <h2 className="day">{day}:</h2>
+              <h2 className="day">
+                <i className="fad fa-location-arrow" /> &nbsp;
+                {day}:
+              </h2>
               <span className="brief-desc">{title}</span>
             </div>
-            <p>{brief}</p>
+            <pre>{brief}</pre>
           </div>
         </article>
       ) : null}

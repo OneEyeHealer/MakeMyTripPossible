@@ -58,6 +58,7 @@ function SectionPortfolio({
                   amount={tour[amount]}
                   discount={tour[discount]}
                   value={tour[rate]}
+                  rate={tour.rate}
                   {...rating}
                 />
               ))}

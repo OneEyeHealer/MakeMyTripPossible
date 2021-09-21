@@ -10,6 +10,7 @@ export const about = "fad fa-book-reader";
 export const destination = "fad fa-route";
 export const contact = "fad fa-address-book";
 export const popular = "fad fa-star";
+export const city = "fad fa-map-marked";
 
 // about service
 export const dollar = "fad fa-sack-dollar";
@@ -47,7 +48,7 @@ export const close = "fad fa-times";
 
 //social links
 export const facbook =
-  "https://www.facebook.com/profile.php?id=100070701072066";
+  "https://www.facebook.com/Makeyourtrippossible-103209338714717/";
 export const insagram = "https://instagram.com/makeyourtrippossible";
 export const linkedin = "/";
 export const twitter = "/";

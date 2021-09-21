@@ -2,10 +2,10 @@ import TourImg from "../Images/MYTP-xyz-tour.jpg";
 const Hotels = [
   {
     key: "tour1",
-    src: { TourImg },
+    src: TourImg ,
     title: "Hotel One",
     rate: 4.5,
-    place: "City/state/Country",
+    place: ["City","state","Country"],
     description:
       "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
     day: 3,
@@ -48,10 +48,10 @@ const Hotels = [
   },
   {
     key: "tour2",
-    src: { TourImg },
+    src: TourImg ,
     title: "Hotel Two",
     rate: 1,
-    place: "City/state/Country",
+    place: ["City","state","Country"],
     description:
       "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
     day: 2,
@@ -70,10 +70,10 @@ const Hotels = [
   },
   {
     key: "tour3",
-    src: { TourImg },
+    src: TourImg ,
     title: "Hotel Three",
     rate: 4,
-    place: "City/state/Country",
+    place: ["City","state","Country"],
     description:
       "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
     day: 2,

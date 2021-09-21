@@ -99,3 +99,36 @@ export const culturalData = [
     para: "About the cultural Place",
   },
 ];
+
+export const blogs = [
+  {
+    key: "blog-1",
+    title: "Tamil Nadu",
+    href: "https://setupwithprachi.blogspot.com/2021/09/top-10-places-to-visit-in-tamil-nadu.html",
+  },
+  {
+    key: "blog-2",
+    title: "Kerala",
+    href: "https://setupwithprachi.blogspot.com/2021/09/11-best-places-to-visit-in-kerala.html",
+  },
+  {
+    key: "blog-3",
+    title: "Delhi",
+    href: "https://setupwithprachi.blogspot.com/2021/08/delhi-its-places-to-visit.html",
+  },
+  {
+    key: "blog-3",
+    title: "Himachal Pradesh",
+    href: "https://setupwithprachi.blogspot.com/2021/08/everything-about-himachal-pradesh.html",
+  },
+  {
+    key: "blog-3",
+    title: "Uttrakhand",
+    href: "https://setupwithprachi.blogspot.com/2021/08/10-must-visit-places-in-uttrakhand.html",
+  },
+  {
+    key: "blog-3",
+    title: "Punjab",
+    href: "https://setupwithprachi.blogspot.com/2021/09/top-10-places-to-visit-in-punjab.html",
+  },
+];
