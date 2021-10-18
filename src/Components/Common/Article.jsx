@@ -13,7 +13,8 @@ function Article({ day, title, brief }) {
               </h2>
               <span className="brief-desc">{title}</span>
             </div>
-            <pre>{brief}</pre>
+
+            <p className="tour-details">{brief}</p>
           </div>
         </article>
       ) : null}

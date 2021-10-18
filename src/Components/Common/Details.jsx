@@ -9,16 +9,7 @@ import {
 } from "../../Services/ImgService";
 import Article from "./Article";
 
-function Details({
-  setTourData,
-  setShowTour,
-  tourData,
-  tDays,
-  key,
-  day,
-  title,
-  brief,
-}) {
+function Details({ setTourData, setShowTour, tourData, tDays, title }) {
   return (
     <>
       {Object.keys(tourData).length > 0 ? (
@@ -34,7 +25,7 @@ function Details({
             <i className={close}></i>
           </span>
           {/* <hr /> */}
-          <h3 className="tittle text-center mt-3">{tourData[title]}</h3>
+          <h3 className="tittle text-center mt-3">{tourData.title}</h3>
           <div className="container">
             <h2 className="overview py-2 px-3">
               {" "}
@@ -65,10 +56,10 @@ function Details({
           <Article />
           {tDays.map((data) => (
             <Article
-              key={data[key]}
-              day={data[day]}
-              title={data[title]}
-              brief={data[brief]}
+              key={data.key}
+              day={data.day}
+              title={data.title}
+              brief={data.brief}
             />
           ))}
           <hr />
@@ -81,10 +72,4 @@ function Details({
     </>
   );
 }
-Details.defaultProps = {
-  key: "key",
-  day: "day",
-  title: "title",
-  brief: "brief",
-};
 export default Details;

@@ -1,15 +1,14 @@
-import TourImg from "../Images/MYTP-xyz-tour.jpg";
 import himachal from "../Images/JIBHI_HIMACHAL_PRADES.jpeg";
 import kasola from "../Images/KASOL_&_Kheerganga_HIMACHAL_PRADESH.jpeg";
+import manali from "../Images/MYTP-manali.jpeg";
 const Tours = [
   {
     key: "tour1",
     src: himachal,
     title: "JIBHI, HIMACHAL PRADESH",
     rate: 4.9,
-    place: ["tripholiday", "Treeking", "camping"],
-    description:
-      "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
+    place: ["Tripholiday", "State", "Camping "],
+    description: "",
     day: 3,
     night: 2,
     amount: 8500,
@@ -19,10 +18,10 @@ const Tours = [
   Enjoy the untouch beauty of the mountains With makeyourtrippossible😎⛰️
       
   Inclusions:
-      👉Delhi - Jibhi - Delhi Transfers by Ac tempo traveller
+      👉 Delhi - Jibhi - Delhi Transfers by Ac tempo traveller
       👉 Accomodation in camps for 2N. (2N Jibhi)
       👉 Meals(3 Breakfast, 2 Lunch, 2 Dinner and Snacks)
-      👉Team Leader
+      👉 Team Leader
       👉 Trek Guide
       👉 Bonfire
       👉 5 KmTrekk towards serolsar lake
@@ -76,10 +75,10 @@ const Tours = [
   Enjoy the Scenic beauty of the mountains with makeyourtrippossible⛰️
 
   Inclusions:
-      👉Delhi - Kasol - Delhi Transfers by Ac tempo traveller
+      👉 Delhi - Kasol - Delhi Transfers by Ac tempo traveller
       👉 Accomodation in camps for 2N. (1N Kasol & 1N Kheerganga)
       👉 Meals(2 Breakfast, 2 Dinner and Snacks)
-      👉Team Leader
+      👉 Team Leader
       👉 Trek Guide
       👉 Bonfire
       👉 11 Km Trekk (Kasol - Kheerganga)
@@ -131,24 +130,66 @@ const Tours = [
   },
   {
     key: "tour3",
-    src: TourImg,
-    title: "Goa",
-    rate: 4,
-    place: ["City", "state", "Country"],
-    description:
-      "Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.",
-    day: 2,
+    src: manali,
+    title: "Manali, Sissu, Jispa, Rothang",
+    rate: 4.7,
+    place: ["Tripholiday", "State", "Camping "],
+    description: "",
+    day: 4,
     night: 3,
-    amount: 1000,
-    discount: 10,
-    date: "On August 5, 2021",
-    overview:
-      "Welcome to a Tour 3 tropical paradise called Goa where Toshali Goan Village Beach Resort welcomes you with its world class hospitality. Set near Candolim beach, North Goa, Toshali Goan Village Beach Resort is a lavish beach resort that meets your both traditional and modern hospitality. Get the most rejuvenating retreat at hotel that pamper you the most with well appointed accommodations and superior services within your permissible budget. Toshali Goan Village Beach Resort has a total of 28 well furnished rooms. The resort is all the state-of-the-art facilities to pamper you on the vacation.",
+    amount: 10000,
+    discount: 30,
+    date: "",
+    overview: `
+    👉 Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. 
+    👉 It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, 
+    it’s a gateway for skiing in the Solang Valley and trekking in Parvati Valley. 
+    👉 It's also a jumping-off point for paragliding, rafting and mountaineering in the Pir Panjal mountains, home to 4,000m-high Rohtang Pass.
+    `,
     days: [
-      { key: "days1", day: "Day 1", title: "Title 1", brief: "" },
-      { key: "days2", day: "Day 2", title: "Title 1", brief: "" },
-      { key: "days3", day: "Day 3", title: "Title 1", brief: "" },
-      { key: "days4", day: "Day 4", title: "Title 1", brief: "" },
+      {
+        key: "days1",
+        day: "Day 1",
+        title: "DELHI TO MANALI",
+        brief:
+          "We depart from Delhi around 6 PM in an AC Vehicle. (Know the true value of time; snatch, seize, and enjoy every moment of it.)",
+      },
+      {
+        key: "days2",
+        day: "Day 2",
+        title: "LOCAL SIGHTSEEING",
+        brief: `
+      • We will reach Manali by morning.
+      • Then you can check in to the hotel. 
+      • Get your rooms allotted, get refreshed. 
+      • Later enjoy local sightseeing visiting Hadimba Devi Temple, The Mall road and Tibetan Monastery etc. • Later visit The mall road in   the evening and come back to the hotel.
+      • Enjoy dinner with bonfire and music.
+      • Overnight stay in hotel.
+     `,
+      },
+      {
+        key: "days3",
+        day: "Day 3",
+        title: "ROHTANG PASS-KEYLONGBARALACHA LA-JISPA(142 KMS)",
+        brief: `
+      • Later start your much awaited Ladakh trip on the famous Leh Manali highway.
+      • Drive over Rohtang Pass to Lahaul Valley.
+      • We will visit, Sissu waterfall and Jispa village.
+      • Arrival at Jispa, check in to the camps. 
+      • Have dinner and Later spend your night under a five billion star hotel.
+      `,
+      },
+      {
+        key: "days4",
+        day: "Day 4",
+        title: "JISPA – ATAL TUNNEL – MANALI (142 KMS)",
+        brief: `
+      Wake up in the Campsite. 
+      • After Breakfast checkout the camps, then head towards Manali. 
+      • It will be a journey of approx. 3 to 4 hours, we will also visit Atal Tunnel while commencing to Manali.
+      • Reach Manali by afternoon and later you are free to explore The local market and The Mall road for some last minute shopping experience.
+      `,
+      },
     ],
   },
 ];

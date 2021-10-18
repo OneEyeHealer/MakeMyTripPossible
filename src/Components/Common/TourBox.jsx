@@ -41,6 +41,7 @@ function TourBox({
 
               <span className="discount-amount">
                 <i className="fas fa-rupee-sign" />
+                &nbsp;
                 {DiscountAmount(amount, discount)}
               </span>
               {/* <span className="discount-percentage">{discount}% off</span> */}

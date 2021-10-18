@@ -185,6 +185,17 @@ form input {
   border-radius: 5px;
   text-align: center;
 }
+@media (max-width: 484px) {
+  .day {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .brief-desc {
+    padding-left: 0 !important;
+    margin: 0 15px;
+    display: block;
+  }
+}
 article p {
   white-space: pre-wrap !important;
 }
@@ -193,6 +204,10 @@ article p {
   line-height: 1.2222em;
   color: #2d3e52;
   padding-left: 30px;
+  /* display: block;
+  margin-left: 120px;
+  position: relative;
+  top: -30px; */
 }
 
 .tour-full-details {
@@ -315,6 +330,12 @@ article p {
   }
 }
 
+@media (max-width: 373px) {
+  .mobile-nav-social ul li a {
+    padding: 0 !important;
+  }
+}
+
 .slogan {
   position: relative;
   top: 20vh;
@@ -359,4 +380,8 @@ article p {
 
 .align-gallery-acitve {
   background: var(--theme-color) !important;
+}
+
+.tour-details {
+  color: #000;
 }

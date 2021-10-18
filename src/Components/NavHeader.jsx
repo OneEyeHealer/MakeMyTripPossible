@@ -38,7 +38,7 @@ function NavHeader({ pathname }) {
                 </a>
               </li>
             </ul>
-            <div className="d-flex mobile-view">
+            <div className="d-flex mobile-nav-social">
               <ul className="top-right-info d-inline">
                 <li className="mr-1">
                   <a href={facbook} target="_blank" rel="noreferrer">
