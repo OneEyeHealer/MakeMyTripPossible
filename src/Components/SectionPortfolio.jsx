@@ -16,6 +16,8 @@ function SectionPortfolio({
   amount,
   discount,
   rate,
+  tourPlace,
+  setTourPlace,
 }) {
   const [tourData, setTourData] = useState({});
   const [tDays, setTDays] = useState([]);
@@ -32,7 +34,7 @@ function SectionPortfolio({
   };
   return (
     <>
-      <section className="portfolio-flyer py-5" id="gallery">
+      <section className="portfolio-flyer py-5" id="tours-details">
         <div className="container pt-lg-3 pb-md-5">
           <h3 className="tittle text-center my-3">
             {heading} {!showTour ? "Details" : ""}
@@ -69,6 +71,8 @@ function SectionPortfolio({
               setShowTour={setShowTour}
               tourData={tourData}
               tDays={tDays}
+              tourPlace={tourPlace}
+              setTourPlace={setTourPlace}
             />
           )}
         </div>

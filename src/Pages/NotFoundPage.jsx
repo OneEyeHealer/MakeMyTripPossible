@@ -9,7 +9,7 @@ function NotFoundPage(props) {
           src={NotFoundImg}
           alt="not-found"
           width="100%"
-          height="auto"
+          height="450px"
         />
       </div>
     </>

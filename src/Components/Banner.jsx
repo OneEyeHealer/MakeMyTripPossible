@@ -18,11 +18,22 @@ function Banner(props) {
                 posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus
                 turpis sodales quis. */}
               </p>
-              <a href="/home/#explore-more" className="btn">
+              <a href="/#tours-details" className="btn">
                 Explore Now
               </a>
             </div>
           </div>
+        </div>
+        <div className="container mt-3 text-center">
+          <iframe
+            width="100%"
+            height="300px"
+            src="https://www.youtube.com/embed/v9bbNq8mNgc"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
     </>

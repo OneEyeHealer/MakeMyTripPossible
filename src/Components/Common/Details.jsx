@@ -8,8 +8,17 @@ import {
   hotel,
 } from "../../Services/ImgService";
 import Article from "./Article";
+import { Link } from "react-router-dom";
 
-function Details({ setTourData, setShowTour, tourData, tDays, title }) {
+function Details({
+  setTourData,
+  setShowTour,
+  tourData,
+  tDays,
+  title,
+  tourPlace,
+  setTourPlace,
+}) {
   return (
     <>
       {Object.keys(tourData).length > 0 ? (
@@ -32,9 +41,16 @@ function Details({ setTourData, setShowTour, tourData, tDays, title }) {
               <i className="fad fa-thumbtack" /> Overview
             </h2>
             <pre>{tourData.overview}</pre>
-            <div className="text-center banner-info-w3ls">
-              <span className="btn">Book Now</span>
-            </div>
+            <Link to="/client-details">
+              <div
+                className="text-center banner-info-w3ls"
+                onClick={() => {
+                  setTourPlace(tourData.title);
+                }}
+              >
+                <span className="btn">Book Now</span>
+              </div>
+            </Link>
             <div className="overview-icons">
               <span title="bus">
                 <i className={bus}></i>

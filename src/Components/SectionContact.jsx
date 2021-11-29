@@ -30,7 +30,7 @@ function SectionContact({ Address, EamilId, PhoneOne, PhoneTwo }) {
                             <i className="fa fa-map-marker"></i>
                             <h4>Location:</h4>
                             <p>
-                              <a href="/home">{ContactInfo.Address}</a>
+                              <a href="/">{ContactInfo.Address}</a>
                             </p>
                           </div>
 

@@ -117,18 +117,38 @@ export const blogs = [
     href: "https://setupwithprachi.blogspot.com/2021/08/delhi-its-places-to-visit.html",
   },
   {
-    key: "blog-3",
+    key: "blog-4",
     title: "Himachal Pradesh",
     href: "https://setupwithprachi.blogspot.com/2021/08/everything-about-himachal-pradesh.html",
   },
   {
-    key: "blog-3",
+    key: "blog-5",
     title: "Uttrakhand",
     href: "https://setupwithprachi.blogspot.com/2021/08/10-must-visit-places-in-uttrakhand.html",
   },
   {
-    key: "blog-3",
+    key: "blog-6",
     title: "Punjab",
     href: "https://setupwithprachi.blogspot.com/2021/09/top-10-places-to-visit-in-punjab.html",
+  },
+  {
+    key: "blog-7",
+    title: "Uttar Pradesh",
+    href: "https://setupwithprachi.blogspot.com/2021/11/tourist-attractions-of-uttar-pradesh.html",
+  },
+];
+
+// inquiry services
+export const destinationOption = [
+  { key: "Manali (honey Moon)", service: "Honey Moon Manali" },
+  { key: "Kashmir (honey Moon)", service: "Honey Moon Kashmir" },
+  { key: "JIBHI, HIMACHAL PRADESH", service: "JIBHI, HIMACHAL PRADESH" },
+  {
+    key: "KASOL  & Kheerganga,  HIMACHAL PRADESH",
+    service: "KASOL  & Kheerganga,  HIMACHAL PRADESH",
+  },
+  {
+    key: "Manali, Sissu, Jispa, Rothang",
+    service: "Manali, Sissu, Jispa, Rothang",
   },
 ];

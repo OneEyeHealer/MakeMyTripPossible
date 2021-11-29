@@ -52,3 +52,9 @@ export const facbook =
 export const insagram = "https://instagram.com/makeyourtrippossible";
 export const linkedin = "/";
 export const twitter = "/";
+
+export const YOUTUBE = [
+  { key: "video1", src: "https://www.youtube.com/embed/6Xx4s8EhGe4" },
+  { key: "video2", src: "https://www.youtube.com/embed/6Xx4s8EhGe4" },
+  { key: "video3", src: "https://www.youtube.com/embed/6Xx4s8EhGe4" },
+];

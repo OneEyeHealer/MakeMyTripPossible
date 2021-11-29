@@ -4,10 +4,21 @@ import SectionGallery from "../Components/SectionGallery";
 import SectionPortfolio from "../Components/SectionPortfolio";
 import SectionStats from "../Components/SectionStats";
 import SectionWhyus from "../Components/SectionWhyus";
-function HomePage({ title, data }) {
+function HomePage({ honeymoon, datahm, title, data, tourPlace, setTourPlace }) {
   return (
     <>
-      <SectionPortfolio heading={title} data={data} />
+      <SectionPortfolio
+        heading={honeymoon}
+        data={datahm}
+        tourPlace={tourPlace}
+        setTourPlace={setTourPlace}
+      />
+      <SectionPortfolio
+        heading={title}
+        data={data}
+        tourPlace={tourPlace}
+        setTourPlace={setTourPlace}
+      />
       <SectionWhyus />
       <SectionAbout />
       <SectionStats />

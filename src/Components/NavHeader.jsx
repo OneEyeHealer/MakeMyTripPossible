@@ -86,7 +86,7 @@ function NavHeader({ pathname }) {
             <input type="checkbox" id="drop" />
             <ul className="menu mt-2 border-radius-class">
               <li className="active">
-                <Link to="/home">
+                <Link to="/">
                   <i className={home}></i>&nbsp;Home
                 </Link>
               </li>

@@ -1,5 +1,5 @@
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
@@ -15,7 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import InquiryDetialsForm from "./Components/InquiryDetailsForm";
 import ServicePage from "./Pages/ServicePage";
 import { Buses } from "./Services/BusService";
-import { Tours } from "./Services/TourService";
+import { honyMoon, Tours } from "./Services/TourService";
 import { Hotels } from "./Services/HotelService";
 import { Flights } from "./Services/FlightService";
 import {
@@ -26,8 +26,15 @@ import {
 } from "./Services/DestinationService";
 import ImagesPage from "./Pages/ImagesPage";
 import SideNav from "./Components/SideNav";
+import ClientDetails from "./Pages/ClientDetails";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [tourPlace, setTourPlace] = useState("");
+  const [name, setName] = useState(tourPlace);
+  useEffect(() => {
+    setName(tourPlace);
+  }, [tourPlace]);
   return (
     <Router>
       <Route render={(props) => <Navbar {...props} />} />
@@ -36,10 +43,18 @@ function App() {
       <div className="main">
         <Switch>
           <Route
-            path="/home"
+            path="/"
             exact
             render={(props) => (
-              <HomePage title="Our Recent Tours" data={Tours} {...props} />
+              <HomePage
+                title="Our Recent Tours"
+                honeymoon="Our Honey Moon Tours"
+                data={Tours}
+                datahm={honyMoon}
+                tourPlace={tourPlace}
+                setTourPlace={setTourPlace}
+                {...props}
+              />
             )}
           />
           {/* <Route path="/tour-details" render={() => <TourDetailPage />} /> */}
@@ -116,12 +131,24 @@ function App() {
             )}
           />
           <Route path="/contact-us" component={ContactPage} />
+          <Route
+            path="/client-details"
+            render={(props) => (
+              <ClientDetails
+                title="Cultural Destination"
+                destination={name}
+                {...props}
+              />
+            )}
+            component={ClientDetails}
+          />
           <Route path="/not-found" component={NotFoundPage} />
           <Redirect from="/" exact to="/home" />
           <Redirect to="/not-found" />
         </Switch>
       </div>
-      <InquiryDetialsForm />
+      <Route render={(props) => <InquiryDetialsForm {...props} />} />
+      {/* <InquiryDetialsForm {...props} /> */}
       <Footer />
     </Router>
   );
