@@ -24,9 +24,9 @@ function Banner(props) {
             </div>
           </div>
         </div>
-        <div className="container mt-3 text-center">
+        {/* <div className="container mt-3 text-center">
           <iframe
-            width="100%"
+            width="200px"
             height="300px"
             src="https://www.youtube.com/embed/v9bbNq8mNgc"
             title="YouTube video player"
@@ -34,7 +34,7 @@ function Banner(props) {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </div>
+        </div> */}
       </section>
     </>
   );

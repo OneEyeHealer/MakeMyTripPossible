@@ -19,10 +19,10 @@ import { honyMoon, Tours } from "./Services/TourService";
 import { Hotels } from "./Services/HotelService";
 import { Flights } from "./Services/FlightService";
 import {
-  culturalData,
+  roadData,
   natureData,
   popularData,
-  spritualData,
+  hillsData,
 } from "./Services/DestinationService";
 import ImagesPage from "./Pages/ImagesPage";
 import SideNav from "./Components/SideNav";
@@ -48,7 +48,7 @@ function App() {
             render={(props) => (
               <HomePage
                 title="Our Recent Tours"
-                honeymoon="Our Honey Moon Tours"
+                honeymoon="Our honeymoon Packages"
                 data={Tours}
                 datahm={honyMoon}
                 tourPlace={tourPlace}
@@ -111,23 +111,19 @@ function App() {
             )}
           />
           <Route
-            path="/destination/spritual-places"
+            path="/destination/hills-places"
             render={(props) => (
               <ImagesPage
-                title="Spritual Destination"
-                data={spritualData}
+                title="hills Destination"
+                data={hillsData}
                 {...props}
               />
             )}
           />
           <Route
-            path="/destination/cultural-places"
+            path="/destination/road-places"
             render={(props) => (
-              <ImagesPage
-                title="Cultural Destination"
-                data={culturalData}
-                {...props}
-              />
+              <ImagesPage title="road Destination" data={roadData} {...props} />
             )}
           />
           <Route path="/contact-us" component={ContactPage} />

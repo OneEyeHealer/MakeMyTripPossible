@@ -41,7 +41,7 @@ function SectionPortfolio({
           </h3>
 
           {showTour ? (
-            <div className="row news-grids pb-lg-5 mt-3">
+            <div className="row news-grids pb-lg-5">
               {data.map((tour) => (
                 <TourBox
                   setTourData={setTourData}

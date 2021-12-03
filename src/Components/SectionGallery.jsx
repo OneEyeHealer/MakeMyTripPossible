@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import ImagesPage from "../Pages/ImagesPage";
 import {
-  culturalData,
+  roadData,
   natureData,
   popularData,
-  spritualData,
+  hillsData,
 } from "../Services/DestinationService";
 
 const SectionGallery = (props) => {
   const [name, setName] = useState("");
   const [item, setItem] = useState(popularData);
   const [ikey, setIkey] = useState("");
+
   const gallery = [
     { title: "Popular", data: popularData },
     { title: "Nature", data: natureData },
-    { title: "Spritual", data: spritualData },
-    { title: "Cultural", data: culturalData },
+    { title: "Hills", data: hillsData },
+    { title: "Road", data: roadData },
   ];
   return (
     <>

@@ -27,7 +27,7 @@ function TourBox({
   };
   return (
     <>
-      <div className="col gal-img mt-lg-4">
+      <div className="col-lg-4 col-md-6 col-sm-4 gal-img mt-lg-4 mt-sm-0">
         <span className="onsale">{discount}% off</span>
         <div className="gal-info">
           {/* <Link to="destination"> */}

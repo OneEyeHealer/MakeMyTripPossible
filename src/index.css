@@ -385,3 +385,14 @@ article p {
 .tour-details {
   color: #000;
 }
+
+@media (max-width: 768px) {
+  .onMobilehide {
+    display: none;
+  }
+}
+
+.onHover:hover {
+  display: none;
+  z-index: -1;
+}
