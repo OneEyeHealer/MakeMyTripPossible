@@ -1,0 +1,141 @@
+.search-box {
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 30%;
+  width: 60% !important;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding: 17px 10px 0 10px !important;
+  border-radius: 50px;
+  z-index: 9;
+  color: #fff;
+  cursor: pointer;
+}
+.mytp-rating {
+  position: absolute;
+  top: 55%;
+  width: 60%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 200px) and (max-width: 700px) {
+  .mytp-rating img {
+    width: 50%;
+  }
+}
+
+.input-search-class::placeholder {
+  color: #fff !important;
+  opacity: 1; /* Firefox */
+}
+
+.input-search-class:-ms-input-placeholder {
+  color: #fff;
+}
+
+.input-search-class::-ms-input-placeholder {
+  color: #fff;
+}
+@media (min-width: 991px) and (max-width: 1400px) {
+  .search-box {
+    width: 60% !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 990px) {
+  .search-box {
+    width: 80% !important;
+  }
+}
+.fa-search {
+  cursor: pointer;
+  position: absolute;
+  background: transparent;
+  padding: 0;
+  border: none;
+  top: 30px;
+  left: 30px;
+  font-size: 18px;
+  color: #000;
+  /* position: relative;
+  align-items: flex-start;
+  top: 30px;
+  left: -7em;
+  color: steelblue;
+  cursor: pointer; */
+}
+.fa-times {
+  position: absolute;
+  background: transparent;
+  padding: 0;
+  border: none;
+  top: 30px;
+  right: 35px;
+  font-size: 18px;
+  color: #000;
+}
+
+.search-box input {
+  margin: auto;
+  border-radius: 25px;
+  height: 45px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  padding-left: 50px;
+}
+.input-search-class {
+  margin: auto;
+  border-radius: 25px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  padding: 8px 10px 8px 40px;
+  /* width: 16em; */
+  /* border: none; */
+  border-bottom: 4px solid rgb(150, 130, 238);
+  border-radius: 15px !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.input-search-class:focus {
+  border: none;
+  border-bottom: 4px solid rgb(150, 130, 238);
+  border-radius: 15px !important;
+  border-color: none !important;
+  box-shadow: none;
+}
+.input-search-class:focus::placeholder {
+  color: #000 !important;
+}
+
+.container .search-data-box {
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.container .search-data-box li {
+  list-style: none;
+  border-bottom: 1px solid #969090;
+  padding: 4px 0px;
+  color: #000;
+}
+
+.awaited-trips {
+  position: absolute;
+  top: 45%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: var(--theme-color);
+  color: #fff;
+  cursor: pointer;
+  width: 14em;
+  border: none;
+}

@@ -1,0 +1,54 @@
+.overview {
+  background: var(--theme-color);
+  color: #fff;
+  text-shadow: 2px 1px 1px rgb(0 0 0 / 50%);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+.overview-icons span {
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+.tabContents {
+  box-sizing: content-box;
+  padding: 20px 30px;
+  box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+  position: relative;
+  background: #fff;
+}
+
+.wpb_wrapper strong {
+  text-transform: uppercase;
+}
+.tabContents h3 {
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.tabContents h3 i {
+  color: var(--theme-color);
+}
+
+.tabContents p {
+  font-size: 16px !important;
+  line-height: 22px !important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 400 !important;
+}
+
+.trip-section-list {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.trip-section-list li {
+  list-style: disc;
+}

@@ -1,153 +1,49 @@
+import React from "react";
 import {
   BrowserRouter as Router,
-  Route,
   Switch,
+  Route,
   Redirect,
 } from "react-router-dom";
+import { dataContext } from "./shared/context/data-context";
 import { ToastContainer } from "react-toastify";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-import HomePage from "./Pages/HomePage";
-import NotFoundPage from "./Pages/NotFoundPage";
-import ContactPage from "./Pages/ContactPage";
-import "./App.css";
+import MainNavigation from "./shared/components/Navigation/MainNavigation";
+import logo from "./shared/img/MakeYourTripPossible_logo.png";
+import MainFooterNavigation from "./shared/components/Footer/MainFooterNavigation";
+import contactLinks from "./data/contact-links.json";
+import allPlaceData from "./data/all-places.json";
+import HomePage from "./places/pages/HomePage";
+import NotFound from "./shared/components/UIElements/NotFound";
+import "./shared/css/style.css";
 import "react-toastify/dist/ReactToastify.css";
-import InquiryDetialsForm from "./Components/InquiryDetailsForm";
-import ServicePage from "./Pages/ServicePage";
-import { Buses } from "./Services/BusService";
-import { honyMoon, Tours } from "./Services/TourService";
-import { Hotels } from "./Services/HotelService";
-import { Flights } from "./Services/FlightService";
-import {
-  roadData,
-  natureData,
-  popularData,
-  hillsData,
-} from "./Services/DestinationService";
-import ImagesPage from "./Pages/ImagesPage";
-import SideNav from "./Components/SideNav";
-import ClientDetails from "./Pages/ClientDetails";
-import { useEffect, useState } from "react";
 
-function App() {
-  const [tourPlace, setTourPlace] = useState("");
-  const [name, setName] = useState(tourPlace);
-  useEffect(() => {
-    setName(tourPlace);
-  }, [tourPlace]);
-  return (
-    <Router>
-      <Route render={(props) => <Navbar {...props} />} />
-      <SideNav phoneNumber="9953880159" />
-      <ToastContainer />
-      <div className="main">
-        <Switch>
-          <Route
-            path="/"
-            exact
-            render={(props) => (
-              <HomePage
-                title="Our Recent Tours"
-                honeymoon="Our honeymoon Packages"
-                data={Tours}
-                datahm={honyMoon}
-                tourPlace={tourPlace}
-                setTourPlace={setTourPlace}
-                {...props}
-              />
-            )}
-          />
-          {/* <Route path="/tour-details" render={() => <TourDetailPage />} /> */}
-          <Route
-            path="/service/bus"
-            render={(props) => (
-              <ServicePage title="Our Bus Services" data={Buses} {...props} />
-            )}
-          />
-          <Route
-            path="/service/hotel"
-            render={(props) => (
-              <ServicePage
-                title="Our Hotel Services"
-                data={Hotels}
-                {...props}
-              />
-            )}
-          />
-          <Route
-            path="/service/car"
-            render={(props) => (
-              <ServicePage title="Our Car Services" {...props} />
-            )}
-          />
-          <Route
-            path="/service/flight"
-            render={(props) => (
-              <ServicePage
-                title="Our Flights Services"
-                data={Flights}
-                {...props}
-              />
-            )}
-          />
-          <Route
-            path="/destination/popular-places"
-            render={(props) => (
-              <ImagesPage
-                title="Popular Destination"
-                data={popularData}
-                {...props}
-              />
-            )}
-          />
-          <Route
-            path="/destination/nature-places"
-            render={(props) => (
-              <ImagesPage
-                title="Nature Destination"
-                data={natureData}
-                {...props}
-              />
-            )}
-          />
-          <Route
-            path="/destination/hills-places"
-            render={(props) => (
-              <ImagesPage
-                title="hills Destination"
-                data={hillsData}
-                {...props}
-              />
-            )}
-          />
-          <Route
-            path="/destination/road-places"
-            render={(props) => (
-              <ImagesPage title="road Destination" data={roadData} {...props} />
-            )}
-          />
-          <Route path="/contact-us" component={ContactPage} />
-          <Route
-            path="/client-details"
-            render={(props) => (
-              <ClientDetails
-                title="Cultural Destination"
-                destination={name}
-                {...props}
-              />
-            )}
-            component={ClientDetails}
-          />
-          <Route path="/not-found" component={NotFoundPage} />
-          <Redirect from="/" exact to="/home" />
-          <Redirect to="/not-found" />
-        </Switch>
-      </div>
-      <Route render={(props) => <InquiryDetialsForm {...props} />} />
-      {/* <InquiryDetialsForm {...props} /> */}
-      <Footer />
-    </Router>
+const App = () => {
+  let routes = (
+    <Switch>
+      <Route path="/" exact render={(props) => <HomePage />} />
+      <Route
+        path="/trip/:tripTitle"
+        exact
+        render={(props) => <HomePage {...props} />}
+      />
+      <Route path="/not-found" component={NotFound} />
+      <Redirect from="/" exact to="/home" />
+      <Redirect to="/not-found" />
+    </Switch>
   );
-}
+
+  return (
+    <dataContext.Provider
+      value={{ contacts: contactLinks, allPlaces: allPlaceData }}
+    >
+      <Router>
+        <MainNavigation logo={logo} />
+        <ToastContainer />
+        <main>{routes}</main>
+        <MainFooterNavigation />
+      </Router>
+    </dataContext.Provider>
+  );
+};
 
 export default App;

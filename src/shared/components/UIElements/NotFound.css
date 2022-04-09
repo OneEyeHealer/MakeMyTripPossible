@@ -1,0 +1,16 @@
+.notFound-space {
+  padding: 8em 0 3em 0;
+  text-align: center;
+}
+
+.notFound-space img {
+  width: 400px;
+  height: 400px;
+}
+
+@media (min-width: 0px) and (max-width: 468px) {
+  .notFound-space img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Road",
+    "links": "/"
+  },
+  {
+    "id": 2,
+    "title": "Himalayas",
+    "links": "/"
+  },
+  {
+    "id": 3,
+    "title": "Weekend",
+    "links": "/"
+  },
+  {
+    "id": 4,
+    "title": "Solo",
+    "links": "/"
+  },
+  {
+    "id": 5,
+    "title": "Group",
+    "links": "/"
+  },
+  {
+    "id": 6,
+    "title": "Parents special",
+    "links": "/"
+  }
+]

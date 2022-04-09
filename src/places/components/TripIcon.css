@@ -1,0 +1,35 @@
+:root {
+  --theme-color: #0f3285;
+  --border-line: #ef9632;
+}
+.trip-brief-section {
+  width: 80%;
+  padding-top: 20px;
+}
+
+.trip-brief-time {
+  text-align: center;
+}
+
+.trip-brief-time i {
+  font-size: 30px;
+  background: var(--border-line);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+}
+
+.trip-brief-time .trip-duration {
+  padding-top: 10px;
+  font-weight: 400;
+}
+.trip-brief-time p {
+  margin-bottom: 0px;
+}
+
+.trip-brief-time .trip-data {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
