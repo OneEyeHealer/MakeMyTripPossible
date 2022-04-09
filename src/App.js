@@ -27,7 +27,7 @@ const App = () => {
         render={(props) => <HomePage {...props} />}
       />
       <Route path="/not-found" component={NotFound} />
-      <Redirect from="/" exact to="/home" />
+      <Redirect from="/" exact to="/" />
       <Redirect to="/not-found" />
     </Switch>
   );
