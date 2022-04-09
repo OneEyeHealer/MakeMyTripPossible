@@ -1,12 +1,12 @@
-:root {
-  --theme-color: #0f3285;
-  --border-line: #ef9632;
-}
 .trip-brief-section {
   width: 80%;
   padding-top: 20px;
 }
-
+@media (min-width: 275px) and (max-width: 568px) {
+  .trip-brief-section {
+    width: 100%;
+  }
+}
 .trip-brief-time {
   text-align: center;
 }

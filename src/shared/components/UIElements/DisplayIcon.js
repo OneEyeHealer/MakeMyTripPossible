@@ -4,21 +4,21 @@ const DisplayIcon = (props) => {
   return (
     <div className={props.className}>
       <div className="trip-brief-time">
-        {props.Duration && <i className="fad fa-clock" />}
-        {props.StartingPrice && <i className="fad fa-rupee-sign" />}
-        {props.PickUp && <i className="fad fa-map-marker-alt" />}
+        <i className={props.icon} />
         <p className="trip-duration">{props.title}</p>
-        {props.Duration && (
-          <p className="trip-data">
-            {props.night} Nights {props.day} Days
-          </p>
-        )}
-        {props.StartingPrice && <p className="trip-data">{props.price}/-</p>}
-        {props.PickUp && (
-          <p className="trip-data">
-            {props.start} to {props.end}
-          </p>
-        )}
+        <p className="trip-data">
+          {props.Duration && (
+            <>
+              {props.night} Nights {props.day} Days
+            </>
+          )}
+          {props.StartingPrice && <>{props.price}/-</>}
+          {props.PickUp && (
+            <>
+              {props.start} to {props.end}
+            </>
+          )}
+        </p>
       </div>
     </div>
   );
