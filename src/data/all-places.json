@@ -60,7 +60,7 @@
         "inclusion": [
           "Accommodation for 2 nights in a Homestay/Campsite",
           "River Rafting  ",
-          "A total of 5 meals-2 meals on Day 1 +2 meals on Day 2 + 1 meal on Day 3",
+          "A total of 5 meals-2 meals on Day 1 + 2 meals on Day 2 + 1 meal on Day 3",
           "AC Transportation.",
           "Local Sightseeing. D Guide while Trekking."
         ],
@@ -76,7 +76,7 @@
   },
   {
     "id": 2,
-    "img": "/img/MakeYourTripPossible_KASOL.jpeg",
+    "img": "/img/MakeYourTripPossible_KASOL.jpg",
     "bannerUrl": "/img/MakeyourTripPossible_KASOL_Banner.jpg",
     "topWeekendTrip": true,
     "topCategoryTrip": true,

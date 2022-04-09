@@ -22,6 +22,8 @@ const HomePage = (props) => {
   let bgcStyle = {
     backgroundImage: `linear-gradient( to top, rgba(0, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0) 30% ), url('${data.bannerUrl}')`,
     zIndex: 1,
+    width: "100%",
+    height: "auto",
   };
   return (
     <>

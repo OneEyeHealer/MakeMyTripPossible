@@ -19,33 +19,33 @@ const Contact = (props) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   const response = await fetch(
-    //     "https://v1.nocodeapi.com/mytp/google_sheets/qgcJUNOfTDWzEnOT?tabId=Sheet1",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify([
-    //         [firstName, phone, email, destination, new Date().toLocaleString()],
-    //       ]),
-    //     }
-    //   );
-    //   await response.json();
+    try {
+      const response = await fetch(
+        "https://v1.nocodeapi.com/mytp/google_sheets/qgcJUNOfTDWzEnOT?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            [firstName, phone, email, destination, new Date().toLocaleString()],
+          ]),
+        }
+      );
+      await response.json();
     notify("Your Response has been submitted. We will contact you Shortly !!");
-    //   setData({
-    //     ...data,
-    //     firstName: "",
-    //     phone: "",
-    //     email: "",
-    //     destination: "",
-    //   });
-    // } catch (error) {
-    //   notify(
-    //     "Your Response has not been submitted. Please try again or contanct us on call !!"
-    //   );
-    // }
+      setData({
+        ...data,
+        firstName: "",
+        phone: "",
+        email: "",
+        destination: "",
+      });
+    } catch (error) {
+      notify(
+        "Your Response has not been submitted. Please try again or contanct us on call !!"
+      );
+    }
   };
   const notify = (message) => toast.success(`${message}`);
   return (

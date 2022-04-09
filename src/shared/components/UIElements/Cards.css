@@ -70,8 +70,9 @@
 }
 .img-detail-card .caption-text-left {
   float: left;
-  background: #000;
+  background: var(--border-line);
   color: #fff;
+  font-weight: 700;
   padding: 1px 5px;
   border-radius: 3px;
 }
@@ -79,8 +80,9 @@
 .img-detail-card .caption-text-right {
   float: right;
   padding-right: 15px;
-  background: #000;
+  background: var(--border-line);
   color: #fff;
+  font-weight: 700;
   padding: 1px 5px;
   border-radius: 3px;
 }

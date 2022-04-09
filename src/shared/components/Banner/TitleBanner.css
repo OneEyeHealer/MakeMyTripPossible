@@ -27,9 +27,25 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+@media (min-width: 320px) and (max-width: 567px) {
+  .innerBannerImg h2 {
+    font-size: 3em;
+    padding-top: 140px;
+  }
+
+  .Gitbtn a:first-child {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 20px) and (max-width: 400px) {
+  .Gitbtn a:first-child {
+    margin-right: 15px;
+  }
+}
 @media (min-width: 320px) and (max-width: 767px) {
   .innerBannerImg h2 {
-    font-size: 55px;
+    font-size: 3.5em;
   }
   .Gitbtn {
     position: absolute;
@@ -39,10 +55,14 @@
     margin: 0 auto;
     text-align: center;
   }
+  .Gitbtn a:first-child {
+    margin-right: 15px;
+  }
+
   .ccGegr {
     height: 35px;
     width: 120px;
-    font-size: 13px;
+    font-size: 13px !important;
   }
 }
 
@@ -61,6 +81,6 @@
   .ccGegr {
     height: 25px;
     width: 90px;
-    font-size: 20px;
+    font-size: 10px !important;
   }
 }
