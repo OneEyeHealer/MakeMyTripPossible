@@ -13,7 +13,7 @@ const Contact = (props) => {
   });
   const { firstName, phone, email, destination } = data;
 
-  const { cl_whatsapp } = useContext(dataContext).contacts;
+  const { cl_whatsapp, cl_call } = useContext(dataContext).contacts;
   const handleBooking = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -33,7 +33,9 @@ const Contact = (props) => {
         }
       );
       await response.json();
-    notify("Your Response has been submitted. We will contact you Shortly !!");
+      notify(
+        "Your Response has been submitted. We will contact you Shortly !!"
+      );
       setData({
         ...data,
         firstName: "",
@@ -124,7 +126,7 @@ const Contact = (props) => {
         </a>
       </div>
       <div className="call-now-contact">
-        <a href="tel:8178500967" className="btn btn-dark" rel="noreferrer">
+        <a href={`tel:${cl_call}`} className="btn btn-dark" rel="noreferrer">
           <i className="fa fa-phone"></i> Call Now
         </a>
       </div>

@@ -14,10 +14,10 @@ const TitleBanner = (props) => {
       <h2 style={Style}>{props.title}</h2>
       {props.DetailTrip && (
         <div className="Gitbtn">
-          <a href="/">
+          <a href="/inquiry-page">
             <button className="btn ccGegr">Trip Itineray</button>
           </a>
-          <a href="/">
+          <a href="/inquiry-page">
             <button className="btn ccGegr">Book Now</button>
           </a>
         </div>

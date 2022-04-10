@@ -33,20 +33,20 @@ const NavLinks = ({ logo }) => {
           <Link to="/">&nbsp;Home</Link>
         </li>
         <li>
-          <Link to="/">&nbsp;Parent Trip</Link>
+          <Link to="/parent-trip">&nbsp;Parent Trip</Link>
         </li>
         <li>
-          <Link to="/">&nbsp;International</Link>
+          <Link to="/international">&nbsp;International</Link>
         </li>
         <li>
-          <Link to="/">&nbsp;Blogs</Link>
+          <Link to="/blogs">&nbsp;Blogs</Link>
         </li>
         <li className="dropdown">
           <label htmlFor="drop-2" className="toggle text-light">
             Awaited Trips
             <span className="fad fa-angle-down" aria-hidden="true"></span>
           </label>
-          <Link to="/">
+          <Link to="/awated-trips">
             Awaited Trips
             <span className="fad fa-angle-down" aria-hidden="true"></span>
           </Link>
